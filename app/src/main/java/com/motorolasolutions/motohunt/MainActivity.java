@@ -1,16 +1,16 @@
-package com.hodaya.motohunt;
+package com.motorolasolutions.motohunt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.hodaya.motohunt.R;
+
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         button=findViewById(R.id.button);
         button.setOnClickListener(view -> {
-            if(team.getText().)
+            //if(team.getText().)
         });
     }
 
@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
         edit.apply();
     }
 
-    private void loadList() {
-        mSharedPreferences= getContext().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE);
-        Set<String> string_set = mSharedPreferences.getStringSet(TODO_LIST,null);
-        values=new ArrayList<>(string_set);
-    }
+//    private void loadList() {
+//        mSharedPreferences= getContext().getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE);
+//        Set<String> string_set = mSharedPreferences.getStringSet(TODO_LIST,null);
+//        values=new ArrayList<>(string_set);
+//    }
 }

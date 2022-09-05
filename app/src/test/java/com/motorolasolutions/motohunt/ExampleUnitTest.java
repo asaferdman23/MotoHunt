@@ -1,4 +1,4 @@
-package com.hodaya.motohunt;
+package com.motorolasolutions.motohunt;
 
 import org.junit.Test;
 
