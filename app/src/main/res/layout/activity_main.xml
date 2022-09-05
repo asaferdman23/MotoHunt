@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        tools:ignore="MissingConstraints">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="403dp"
+        android:layout_height="721dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/moto_hunt_logo"
+            android:layout_width="331dp"
+            android:layout_height="102dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="20dp"
+            app:srcCompat="@drawable/motohunt_logo"
+            tools:ignore="ContentDescription" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/team"
+            android:inputType="textPersonName"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/name1"
+            android:inputType="textPersonName"
+            tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/name2"
+            android:inputType="textPersonName"
+            tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/name3"
+            android:inputType="textPersonName"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/name4"
+            android:inputType="textPersonName"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/name5"
+            android:inputType="textPersonName"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="268dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="@string/button"
+            android:textColor="#212121"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
