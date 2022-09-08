@@ -11,14 +11,13 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/motohunt_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MotoHunt.NoActionBar"
+        android:theme="@style/Theme.MotoHunt"
         tools:targetApi="31" >
         <activity
-            android:name="com.motorolasolutions.motohunt.MainActivity"
+            android:name="com.motorolasolutions.motohunt.TeamSetActivity"
             android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
-
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
