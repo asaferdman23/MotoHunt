@@ -6,8 +6,15 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.sdsmdg.tastytoast.TastyToast;
+
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class TeamSetActivity extends BasicActivity {
@@ -21,6 +28,11 @@ public class TeamSetActivity extends BasicActivity {
     Set<String> mMembers;
 
     @Override
+    protected void setNextTask() {
+        nextTask = 1; // Hint
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_team);
@@ -31,6 +43,7 @@ public class TeamSetActivity extends BasicActivity {
     @Override
     public void init() {
         super.init();
+
         team = findViewById(R.id.editText1);
         name1 = findViewById(R.id.editText2);
         name2 = findViewById(R.id.editText3);
@@ -38,6 +51,7 @@ public class TeamSetActivity extends BasicActivity {
         name4 = findViewById(R.id.editText5);
         name5 = findViewById(R.id.editText6);
         name6 = findViewById(R.id.editText7);
+        mMembers = new HashSet<>();
 
         button = findViewById(R.id.button);
         button.setOnClickListener(view -> {
@@ -48,9 +62,12 @@ public class TeamSetActivity extends BasicActivity {
             check(name4);
             check(name5);
             check(name6);
-            if (teamMembersCount >= 4)
+            if (teamMembersCount >= 4){
                 saveTeam();
-            else {
+                endActivity();
+            } else {
+                TastyToast.makeText(getApplicationContext(), getResources().getString(R.string.didnt_finish),
+                        TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 // some toast that say something doesnt make sense
             }
         });

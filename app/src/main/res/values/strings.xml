@@ -5,5 +5,60 @@
     <string name="team">Team Name</string>
     <string name="button">Set our MotoTeam!</string>
     <string name="name_team_member">Team member</string>
+    <string name="cancel_dialog_btn">Cancel</string>
+    <string name="continue_dialog_btn">Got it!</string>
+    <string name="ans_string_arr" />
+    <string name="end_activity">Success! Good job!</string>
+    <string name="didnt_finish">Please complete the MotoTask!</string>
+
+    <string-array name="options_list">
+        <item>N</item>
+        <item>Nah</item>
+        <item>Nahm</item>
+        <item>Nahman</item>
+        <item>Meuman</item>
+        <item>Dor Perets</item>
+        <item>Dor Micha</item>
+        <item>Asaf Erdman</item>
+        <item>Asaf Erdman123</item>
+    </string-array>
+
+    <string-array name="answer_list_guess_who">
+        <item>placeholder_answer_1</item>
+        <item>placeholder_answer_2</item>
+        <item>placeholder_answer_3</item>
+        <item>placeholder_answer_4</item>
+        <item>placeholder_answer_5</item>
+        <item>placeholder_answer_6</item>
+        <item>placeholder_answer_7</item>
+        <item>placeholder_answer_8</item>
+        <item>placeholder_answer_9</item>
+        <item>placeholder_answer_10</item>
+        <item>placeholder_answer_11</item>
+        <item>placeholder_answer_12</item>
+        <item>placeholder_answer_13</item>
+        <item>placeholder_answer_14</item>
+        <item>placeholder_answer_15</item>
+        <item>placeholder_answer_16</item>
+    </string-array>
+
+    <string-array name="questions_list_guess_who">
+        <item>placeholder_question_1</item>
+        <item>placeholder_question_2</item>
+        <item>placeholder_question_3</item>
+        <item>placeholder_question_4</item>
+        <item>placeholder_question_5</item>
+        <item>placeholder_question_6</item>
+        <item>placeholder_question_7</item>
+        <item>placeholder_question_8</item>
+        <item>placeholder_question_9</item>
+        <item>placeholder_question_10</item>
+        <item>placeholder_question_11</item>
+        <item>placeholder_question_12</item>
+        <item>placeholder_question_13</item>
+        <item>placeholder_question_14</item>
+        <item>placeholder_question_15</item>
+        <item>placeholder_question_16</item>
+    </string-array>
 
 </resources>
