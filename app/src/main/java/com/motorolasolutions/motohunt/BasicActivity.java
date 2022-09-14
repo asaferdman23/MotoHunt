@@ -72,7 +72,6 @@ public abstract class BasicActivity extends AppCompatActivity {
         konfettiView = findViewById(R.id.viewKonfetti);
         konfettiView.bringToFront();
         mHandler = new Handler();
-        // TODO: Start Timer in here
         initTimer();
         runTimer();
     }
