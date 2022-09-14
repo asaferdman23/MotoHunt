@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -51,6 +52,7 @@ public abstract class BasicActivity extends AppCompatActivity {
     TextView mTimer;
     private int seconds;
     private boolean running;
+    private String time;
 
     int nextTask;
 
@@ -72,8 +74,11 @@ public abstract class BasicActivity extends AppCompatActivity {
         konfettiView = findViewById(R.id.viewKonfetti);
         konfettiView.bringToFront();
         mHandler = new Handler();
-        initTimer();
-        runTimer();
+        mTimer=findViewById(R.id.timer_view);
+        if(mTimer!=null) {
+            initTimer();
+            runTimer();
+        }
     }
 
     @Override
@@ -85,6 +90,9 @@ public abstract class BasicActivity extends AppCompatActivity {
     protected void endActivity() {
         // this should be at the end of any activity, after finishing the mission
         // TODO: End Timer + Save in here
+        running=false;
+        // save time //
+
         konfettiView.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
                 .setDirection(0.0, 359.0)
@@ -123,10 +131,10 @@ public abstract class BasicActivity extends AppCompatActivity {
     }
 
     private void initTimer() {
-        mTimer=findViewById(R.id.timer_view);
         mTimer.setTextColor(getResources().getColor(R.color.motoBlue));
         seconds=0;
         running=true;
+
     }
     private void runTimer() {
         mHandler.post(new Runnable() {
@@ -136,7 +144,7 @@ public abstract class BasicActivity extends AppCompatActivity {
                 int minutes = (seconds % 3600) / 60;
                 int secs=seconds% 60;
 
-                String time=String.format(Locale.getDefault(),"%d:%02d:%02d",hours,minutes,secs);
+                time=String.format(Locale.getDefault(),"%d:%02d:%02d",hours,minutes,secs);
                 mTimer.setText(time);
 
                 if(running) {
