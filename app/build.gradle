@@ -7,7 +7,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.hodaya.motohunt"
+        applicationId "com.motorolasolutions.motohunt"
         minSdk 28
         targetSdk 33
         versionCode 1
