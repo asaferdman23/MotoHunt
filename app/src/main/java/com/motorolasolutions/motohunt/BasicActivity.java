@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -43,6 +45,7 @@ public abstract class BasicActivity extends AppCompatActivity {
 
     KonfettiView konfettiView;
     Handler mHandler;
+    TextView mTimer;
 
     int nextTask;
 
@@ -51,6 +54,10 @@ public abstract class BasicActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        View decorView = getWindow().getDecorView();
+        // Hide both the navigation bar and the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
     }
 
     public void init(){
@@ -60,6 +67,8 @@ public abstract class BasicActivity extends AppCompatActivity {
         konfettiView.bringToFront();
         mHandler = new Handler();
         // TODO: Start Timer in here
+        mTimer=findViewById(R.id.timer_view);
+        mTimer.setTextColor(Color.BLUE);
     }
 
     @Override
