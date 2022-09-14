@@ -3,6 +3,7 @@ package com.motorolasolutions.motohunt;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -47,6 +48,7 @@ import nl.dionsegijn.konfetti.models.Size;
  */
 public abstract class BasicActivity extends AppCompatActivity {
 
+    private static final String TAG ="BasicActivity";
     KonfettiView konfettiView;
     Handler mHandler;
     TextView mTimer;
@@ -91,7 +93,6 @@ public abstract class BasicActivity extends AppCompatActivity {
         // this should be at the end of any activity, after finishing the mission
         // TODO: End Timer + Save in here
         running=false;
-        // save time //
 
         konfettiView.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
@@ -103,7 +104,7 @@ public abstract class BasicActivity extends AppCompatActivity {
                 .addSizes(new Size(12, 5f))
                 .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
                 .streamFor(300, 5000L);
-        //  audioPlayer();
+        audioPlayer();
         TastyToast.makeText(this, getResources().getString(R.string.end_activity),
                 TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
 
@@ -125,8 +126,9 @@ public abstract class BasicActivity extends AppCompatActivity {
         mHandler.postDelayed(mNextTaskRunnable, 6500);
     }
 
-    private void audioPlayer(){
-        MediaPlayer mp=MediaPlayer.create(getApplicationContext(),R.raw.applause);
+    private void audioPlayer() {
+        MediaPlayer mp = new MediaPlayer();
+        mp = MediaPlayer.create(getApplicationContext(), R.raw.applause);
         mp.start();
     }
 
@@ -134,7 +136,6 @@ public abstract class BasicActivity extends AppCompatActivity {
         mTimer.setTextColor(getResources().getColor(R.color.motoBlue));
         seconds=0;
         running=true;
-
     }
     private void runTimer() {
         mHandler.post(new Runnable() {

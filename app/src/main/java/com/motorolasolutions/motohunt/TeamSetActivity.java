@@ -3,18 +3,13 @@ package com.motorolasolutions.motohunt;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
 import android.widget.Button;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.sdsmdg.tastytoast.TastyToast;
 
-import java.util.Collection;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 public class TeamSetActivity extends BasicActivity {
