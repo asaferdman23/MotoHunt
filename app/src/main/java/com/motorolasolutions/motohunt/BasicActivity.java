@@ -3,6 +3,8 @@ package com.motorolasolutions.motohunt;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,6 +42,7 @@ import nl.dionsegijn.konfetti.models.Size;
 public abstract class BasicActivity extends AppCompatActivity {
 
     KonfettiView konfettiView;
+    Handler mHandler;
 
     int nextTask;
 
@@ -51,10 +54,11 @@ public abstract class BasicActivity extends AppCompatActivity {
     }
 
     public void init(){
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         konfettiView = findViewById(R.id.viewKonfetti);
         konfettiView.bringToFront();
+        mHandler = new Handler();
         // TODO: Start Timer in here
     }
 
@@ -64,7 +68,7 @@ public abstract class BasicActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    protected void endActivity(){
+    protected void endActivity() {
         // this should be at the end of any activity, after finishing the mission
         // TODO: End Timer + Save in here
         konfettiView.build()
@@ -74,26 +78,29 @@ public abstract class BasicActivity extends AppCompatActivity {
                 .setFadeOutEnabled(true)
                 .setTimeToLive(2000L)
                 .addShapes(Shape.Square.INSTANCE, Shape.Circle.INSTANCE)
-                .addSizes(new Size(12,5f))
+                .addSizes(new Size(12, 5f))
                 .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
                 .streamFor(300, 5000L);
-        audioPlayer();
+        //  audioPlayer();
         TastyToast.makeText(this, getResources().getString(R.string.end_activity),
                 TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
 
-        switch (nextTask){
-            case 0:             // QR Code
-                // something
-                break;
-            case 1:             // Show Hint
-                // something
-                break;
-            case 2:             // next activity
-                // send intent to next activity
-                break;
-            default:
-                break;
-        }
+        final Runnable mNextTaskRunnable = () -> {
+            switch (nextTask) {
+                case 0:             // QR Code
+                    // something
+                    break;
+                case 1:             // Show Hint
+                    // something
+                    break;
+                case 2:             // next activity
+                    // send intent to next activity
+                    break;
+                default:
+                    break;
+            }
+        };
+        mHandler.postDelayed(mNextTaskRunnable, 6500);
     }
 
     private void audioPlayer(){
