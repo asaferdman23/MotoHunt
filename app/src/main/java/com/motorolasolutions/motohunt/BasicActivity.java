@@ -1,5 +1,6 @@
 package com.motorolasolutions.motohunt;
 
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.sdsmdg.tastytoast.TastyToast;
+
+import java.util.Locale;
 
 import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
@@ -46,6 +49,8 @@ public abstract class BasicActivity extends AppCompatActivity {
     KonfettiView konfettiView;
     Handler mHandler;
     TextView mTimer;
+    private int seconds;
+    private boolean running;
 
     int nextTask;
 
@@ -61,14 +66,15 @@ public abstract class BasicActivity extends AppCompatActivity {
     }
 
     public void init(){
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         konfettiView = findViewById(R.id.viewKonfetti);
         konfettiView.bringToFront();
         mHandler = new Handler();
         // TODO: Start Timer in here
-        mTimer=findViewById(R.id.timer_view);
-        mTimer.setTextColor(Color.BLUE);
+        initTimer();
+        runTimer();
     }
 
     @Override
@@ -115,5 +121,30 @@ public abstract class BasicActivity extends AppCompatActivity {
     private void audioPlayer(){
         MediaPlayer mp=MediaPlayer.create(getApplicationContext(),R.raw.applause);
         mp.start();
+    }
+
+    private void initTimer() {
+        mTimer=findViewById(R.id.timer_view);
+        mTimer.setTextColor(getResources().getColor(R.color.motoBlue));
+        seconds=0;
+        running=true;
+    }
+    private void runTimer() {
+        mHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                int hours = seconds / 3600;
+                int minutes = (seconds % 3600) / 60;
+                int secs=seconds% 60;
+
+                String time=String.format(Locale.getDefault(),"%d:%02d:%02d",hours,minutes,secs);
+                mTimer.setText(time);
+
+                if(running) {
+                    seconds++;
+                }
+                mHandler.postDelayed(this,1000);
+            }
+        });
     }
 }
