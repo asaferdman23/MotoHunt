@@ -3,11 +3,8 @@ package com.motorolasolutions.motohunt;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.HandlerThread;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -47,8 +44,6 @@ import nl.dionsegijn.konfetti.models.Size;
  * will send to next activity / task / hint / qr
  */
 public abstract class BasicActivity extends AppCompatActivity {
-
-    private static final String TAG ="BasicActivity";
     KonfettiView konfettiView;
     Handler mHandler;
     TextView mTimer;
@@ -104,7 +99,7 @@ public abstract class BasicActivity extends AppCompatActivity {
                 .addSizes(new Size(12, 5f))
                 .setPosition(-50f, konfettiView.getWidth() + 50f, -50f, -50f)
                 .streamFor(300, 5000L);
-        audioPlayer();
+        // audioPlayer();
         TastyToast.makeText(this, getResources().getString(R.string.end_activity),
                 TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
 
@@ -127,8 +122,7 @@ public abstract class BasicActivity extends AppCompatActivity {
     }
 
     private void audioPlayer() {
-        MediaPlayer mp = new MediaPlayer();
-        mp = MediaPlayer.create(getApplicationContext(), R.raw.applause);
+        MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.applause);
         mp.start();
     }
 
