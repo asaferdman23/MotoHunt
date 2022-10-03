@@ -24,6 +24,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
+
         <ImageView
             android:id="@+id/moto_hunt_logo"
             android:layout_width="240dp"
@@ -34,7 +35,7 @@
             tools:ignore="ContentDescription" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/team_name_input"
             android:layout_width="333dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -43,10 +44,13 @@
             android:ems="10"
             android:hint="@string/team"
             android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
+
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/team_member_name1"
             android:layout_width="333dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -54,10 +58,12 @@
             android:ems="10"
             android:hint="@string/name_team_member"
             android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/team_member_name2"
             android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -65,10 +71,12 @@
             android:ems="10"
             android:hint="@string/name_team_member"
             android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/team_member_name3"
             android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -76,10 +84,12 @@
             android:ems="10"
             android:hint="@string/name_team_member"
             android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             tools:ignore="Autofill" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/team_member_name4"
             android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -87,10 +97,12 @@
             android:ems="10"
             android:hint="@string/name_team_member"
             android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             tools:ignore="Autofill" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/team_member_name5"
             android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -98,10 +110,12 @@
             android:ems="10"
             android:hint="@string/name_team_member"
             android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             tools:ignore="Autofill" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/team_member_name6"
             android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
@@ -109,16 +123,23 @@
             android:ems="10"
             android:hint="@string/name_team_member"
             android:inputType="textPersonName"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
             tools:ignore="Autofill" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="268dp"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/set_your_team_button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:text="@string/button"
-            android:textColor="@color/white"
-            tools:ignore="TextContrastCheck" />
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/btn_shape"
+            android:text="@string/set_moto_team_button"
+            android:textColor="@color/white" />
+
     </LinearLayout>
     </ScrollView>
     </LinearLayout>

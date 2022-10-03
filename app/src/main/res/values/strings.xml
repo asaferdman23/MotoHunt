@@ -4,12 +4,14 @@
     <!-- Strings used for fragments for navigation -->
     <string name="team">Team Name</string>
     <string name="button">Set our MotoTeam!</string>
+    <string name="set_moto_team_button">1,2,3 MotoTeam!</string>
     <string name="name_team_member">Team member</string>
     <string name="cancel_dialog_btn">Cancel</string>
     <string name="continue_dialog_btn">Got it!</string>
     <string name="ans_string_arr" />
     <string name="end_activity">Success! Good job!</string>
-    <string name="didnt_finish">Please complete the MotoTask!</string>
+    <string name="empty_field">Please fill the blank fields in MotoTask!</string>
+    <string name="didnt_finish">Please fill the blank fields the MotoTask!</string>
 
     <string-array name="options_list">
         <item>N</item>

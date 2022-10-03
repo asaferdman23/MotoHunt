@@ -1,10 +1,13 @@
 package com.motorolasolutions.motohunt;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -28,22 +31,23 @@ import nl.dionsegijn.konfetti.models.Size;
  * write super.init();
  * add in layout :
  * <include
- *         android:id="@+id/include_app_bar"
- *         layout="@layout/toolbar" />
- *
+ * android:id="@+id/include_app_bar"
+ * layout="@layout/toolbar" />
+ * <p>
  * and then
  * android:layout_marginTop="44dp"
- *
+ * <p>
  * in your toppest view
- *
+ * <p>
  * later, add the FAB button IN HERE
- *
+ * <p>
  * also, this class will start timer (since its the same for all activities
  * will end timer
  * will Toast good job
  * will send to next activity / task / hint / qr
  */
 public abstract class BasicActivity extends AppCompatActivity {
+    private static final String TAG = BasicActivity.class.getName();
     KonfettiView konfettiView;
     Handler mHandler;
     TextView mTimer;
@@ -64,15 +68,15 @@ public abstract class BasicActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    public void init(){
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    public void init() {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         konfettiView = findViewById(R.id.viewKonfetti);
         konfettiView.bringToFront();
         mHandler = new Handler();
-        mTimer=findViewById(R.id.timer_view);
-        if(mTimer!=null) {
+        mTimer = findViewById(R.id.timer_view);
+        if (mTimer != null) {
             initTimer();
             runTimer();
         }
@@ -84,11 +88,22 @@ public abstract class BasicActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+//
+//    private void saveTime() {
+//        SharedPreferences timePreferences; = getSharedPreferences("TIME", Context.MODE_PRIVATE);
+//        SharedPreferences.Editor edit = mSharedPreferences.edit();
+//        edit.putString(TEAM_NAME, team.getText().toString());
+//        edit.putInt(TEAM_COUNT, teamMembersCount);
+//        edit.putStringSet(MEMBERS, mMembers);
+//        edit.apply();
+//    }
+
     protected void endActivity() {
         // this should be at the end of any activity, after finishing the mission
         // TODO: End Timer + Save in here
-        running=false;
-
+        running = false;
+        //saveTime();
+        Log.i(TAG, "endActivity: time is =  " + time);
         konfettiView.build()
                 .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
                 .setDirection(0.0, 359.0)
@@ -128,24 +143,25 @@ public abstract class BasicActivity extends AppCompatActivity {
 
     private void initTimer() {
         mTimer.setTextColor(getResources().getColor(R.color.motoBlue));
-        seconds=0;
-        running=true;
+        seconds = 0;
+        running = true;
     }
+
     private void runTimer() {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
                 int hours = seconds / 3600;
                 int minutes = (seconds % 3600) / 60;
-                int secs=seconds% 60;
+                int secs = seconds % 60;
 
-                time=String.format(Locale.getDefault(),"%d:%02d:%02d",hours,minutes,secs);
+                time = String.format(Locale.getDefault(), "%d:%02d:%02d", hours, minutes, secs);
                 mTimer.setText(time);
 
-                if(running) {
+                if (running) {
                     seconds++;
                 }
-                mHandler.postDelayed(this,1000);
+                mHandler.postDelayed(this, 1000);
             }
         });
     }
