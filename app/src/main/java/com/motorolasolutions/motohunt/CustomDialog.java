@@ -49,9 +49,7 @@ public class CustomDialog extends AppCompatDialogFragment {
                 }
             }
         });
-        editTextAns = (AutoCompleteTextView)
-                view.findViewById(R.id.answer_dialog);
-
+        editTextAns = (AutoCompleteTextView) view.findViewById(R.id.answer_dialog);
         ArrayAdapter<String> adapter = new ArrayAdapter<String> (activity, android.R.layout.select_dialog_item, optionsList);
         editTextAns.setThreshold(2);
         editTextAns.setAdapter(adapter);

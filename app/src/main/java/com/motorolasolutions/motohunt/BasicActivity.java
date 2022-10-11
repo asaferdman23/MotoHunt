@@ -1,7 +1,6 @@
 package com.motorolasolutions.motohunt;
 
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -55,7 +54,7 @@ public abstract class BasicActivity extends AppCompatActivity {
     private boolean running;
     private String time;
 
-    int nextTask;
+    int mNextTask;
 
     protected abstract void setNextTask();
 
@@ -119,9 +118,10 @@ public abstract class BasicActivity extends AppCompatActivity {
                 TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
 
         final Runnable mNextTaskRunnable = () -> {
-            switch (nextTask) {
-                case 0:             // QR Code
-                    // something
+            switch (mNextTask) {
+                case 0:   // QR Code
+                    Intent intent =new Intent(getApplicationContext(),CameraActivity.class);
+                    startActivity(intent);
                     break;
                 case 1:             // Show Hint
                     // something
@@ -133,7 +133,7 @@ public abstract class BasicActivity extends AppCompatActivity {
                     break;
             }
         };
-        mHandler.postDelayed(mNextTaskRunnable, 6500);
+        mHandler.postDelayed(mNextTaskRunnable, 2000);
     }
 
     private void audioPlayer() {

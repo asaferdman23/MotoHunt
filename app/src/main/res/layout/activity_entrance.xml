@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CameraActivity">
+    tools:context=".PathChooserActivity">
 
 
     <include
@@ -15,13 +15,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scan the QR code to see the next adventure!"
+        android:text="Choose your route!"
         android:textColor="@color/motoBlue"
-        android:textSize="18sp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,20 +32,35 @@
         app:layout_constraintVertical_bias="0.252"
         tools:ignore="MissingConstraints" />
 
+    <Spinner
+        android:id="@+id/spinner_entrance"
+        android:layout_width="138dp"
+        android:layout_height="40dp"
+        android:background="@drawable/spinner_bg"
+        android:entries="@array/context_route"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/open_camera_button"
+        android:id="@+id/set_your_route_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="40dp"
         android:background="@drawable/btn_shape"
         android:padding="10dp"
-        android:text="Scan"
+        android:text="@string/finish_button"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.607" />
-
+        app:layout_constraintVertical_bias="0.879" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

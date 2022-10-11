@@ -5,6 +5,7 @@
     <string name="team">Team Name</string>
     <string name="button">Set our MotoTeam!</string>
     <string name="set_moto_team_button">1,2,3 MotoTeam!</string>
+    <string name="finish_button">Finish!</string>
     <string name="name_team_member">Team member</string>
     <string name="cancel_dialog_btn">Cancel</string>
     <string name="continue_dialog_btn">Got it!</string>
@@ -12,18 +13,93 @@
     <string name="end_activity">Success! Good job!</string>
     <string name="empty_field">Please fill the blank fields in MotoTask!</string>
     <string name="didnt_finish">Please fill the blank fields the MotoTask!</string>
+    <string name="flash_option">For flash use volume up key</string>
+    <string name="wrong_qr_code">Oops i can\'t scan it</string>
+    <string name="try_again">Try again</string>
+    <string name="mission_1">Here Is Your First Mission!</string>
+    <string name="mission_2">Here Is Your Second Mission!</string>
+    <string name="mission_3">Here Is Your Third Mission!</string>
+    <string name="mission_4">Here Is Your Fourth Mission!</string>
+    <string name="mission_5">Here Is Your Fifth Mission!</string>
+    <string name="mission_6">Here Is Your Sixth Mission!</string>
+    <string name="mission_7">Here Is Your Seventh Mission!</string>
+    <string name="mission_8">Here Is Your Eight And Last Mission!</string>
 
     <string-array name="options_list">
-        <item>N</item>
-        <item>Nah</item>
-        <item>Nahm</item>
-        <item>Nahman</item>
-        <item>Meuman</item>
         <item>Dor Perets</item>
-        <item>Dor Micha</item>
         <item>Asaf Erdman</item>
-        <item>Asaf Erdman123</item>
+        <item>Esti Kadison</item>
+        <item>Evitar Gueta</item>
+        <item>Eitan Tugy</item>
+        <item>Dor Perets</item>
+        <item>Yulia Louzon</item>
+        <item> Yossi BenAri</item>
+        <item>Yoram.Zeev</item>
+        <item>Eilon Eyal</item>
+        <item>Yakir Nahum</item>
+        <item>Lior Ashkenazy</item>
+        <item> Alexandr Spivak</item>
+        <item>Ella Grad</item>
+        <item>Hodaya Sror</item>
+        <item> Adam Gilboa</item>
+        <item>Avner Carmeli</item>
+        <item>Yehuda Aleiner</item>
+        <item>kfir</item>
+        <item> Leonid Nikolaev</item>
+        <item>Oren Afriat</item>
+        <item>Alex F</item>
+        <item>Andrei Aluf</item>
+        <item>Eylon Heiman</item>
+        <item>Dvir Gozlan</item>
+        <item>Konstantin Karasik</item>
+        <item>Amit Aroch</item>
+        <item>David Ben-Ari</item>
+        <item>Guy Burko</item>
+        <item>Leonid Avdeev</item>
+        <item>Ronit Peleg</item>
+        <item> Neomi Sher</item>
+        <item>Pavlo Yaroshevich</item>
+        <item>Svetlana Dimenshtein</item>
+        <item>Chen Carmiel</item>
+        <item>Sigalit Leybam</item>
+        <item>Yossi Mizrahi</item>
+        <item>Igor Gorodetsky</item>
+        <item> Alon Meron</item>
+        <item>Alena Auslender</item>
+        <item>Eden Herman</item>
+        <item>Michael Medvedev</item>
+        <item>Rita Gurevich</item>
+        <item>lior medina</item>
+        <item>Gilerman Anna</item>
+        <item>Peretz Mahal</item>
+        <item>Rafi Tzidon</item>
+        <item>Snir Sadd</item>
+        <item>Eitan Chaimovich</item>
+        <item>Maayan Maya BenGal</item>
+        <item>Liron Meshulami</item>
+        <item>Hanania Zarour</item>
+        <item>Michael Madar</item>
+        <item>Bredesku Daniil</item>
+        <item>Michael Rakhman</item>
+        <item>Oleg Olshanechky</item>
+        <item>Pavel Kotiai</item>
+        <item>Maksym Symonov</item>
+        <item>Guy Rosen</item>
+        <item>Benny Malka</item>
+        <item>Hadad Maor</item>
+        <item> Rais Or Tsof</item>
+        <item>Mihail gadasin</item>
+        <item>Kahlon Meitar</item>
+        <item>Alexander Parfenchikov</item>
+        <item>Bendavid Talmor</item>
+        <item>Yarin Halili</item>
     </string-array>
+
+    <string-array name="context_route">
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+
 
     <string-array name="answer_list_guess_who">
         <item>placeholder_answer_1</item>

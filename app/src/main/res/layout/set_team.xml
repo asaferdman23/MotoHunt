@@ -17,13 +17,15 @@
         tools:ignore="MissingConstraints">
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:fitsSystemWindows="true">
 
         <ImageView
             android:id="@+id/moto_hunt_logo"
@@ -36,106 +38,127 @@
 
         <EditText
             android:id="@+id/team_name_input"
-            android:layout_width="333dp"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:gravity="center"
             android:autofillHints=""
             android:ems="10"
+            android:background="@drawable/edit_text_bg"
             android:hint="@string/team"
             android:inputType="textPersonName"
-            android:imeOptions="actionDone"
+            android:imeOptions="flagNoExtractUi"
             android:singleLine="true"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/team_member_name1"
-            android:layout_width="333dp"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
             android:ems="10"
+            android:gravity="center"
             android:hint="@string/name_team_member"
+            android:background="@drawable/edit_text_bg"
             android:inputType="textPersonName"
-            android:imeOptions="actionDone"
+            android:imeOptions="flagNoExtractUi"
             android:singleLine="true"
             tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/team_member_name2"
-            android:layout_width="335dp"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
             android:ems="10"
+            android:gravity="center"
             android:hint="@string/name_team_member"
+            android:background="@drawable/edit_text_bg"
             android:inputType="textPersonName"
-            android:imeOptions="actionDone"
+            android:imeOptions="flagNoExtractUi"
             android:singleLine="true"
             tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/team_member_name3"
-            android:layout_width="335dp"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
             android:ems="10"
+            android:gravity="center"
             android:hint="@string/name_team_member"
+            android:background="@drawable/edit_text_bg"
             android:inputType="textPersonName"
-            android:imeOptions="actionDone"
+            android:imeOptions="flagNoExtractUi"
             android:singleLine="true"
             tools:ignore="Autofill" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/team_member_name4"
-            android:layout_width="335dp"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
             android:ems="10"
+            android:gravity="center"
             android:hint="@string/name_team_member"
+            android:background="@drawable/edit_text_bg"
             android:inputType="textPersonName"
-            android:imeOptions="actionDone"
+            android:imeOptions="flagNoExtractUi"
             android:singleLine="true"
             tools:ignore="Autofill" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/team_member_name5"
             android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
             android:ems="10"
+            android:gravity="center"
             android:hint="@string/name_team_member"
+            android:background="@drawable/edit_text_bg"
             android:inputType="textPersonName"
-            android:imeOptions="actionDone"
+            android:imeOptions="flagNoExtractUi"
             android:singleLine="true"
             tools:ignore="Autofill" />
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/team_member_name6"
             android:layout_width="337dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
             android:ems="10"
+            android:gravity="center"
             android:hint="@string/name_team_member"
+            android:background="@drawable/edit_text_bg"
             android:inputType="textPersonName"
-            android:imeOptions="actionDone"
+            android:imeOptions="flagNoExtractUi"
             android:singleLine="true"
             tools:ignore="Autofill" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/set_your_team_button"
-            android:layout_width="match_parent"
+            android:layout_width="337dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
             android:padding="10dp"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/btn_shape"
             android:text="@string/set_moto_team_button"
             android:textColor="@color/white" />

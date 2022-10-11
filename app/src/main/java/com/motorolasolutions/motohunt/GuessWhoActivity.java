@@ -24,7 +24,7 @@ public class GuessWhoActivity extends BasicActivity implements ItemClickListener
 
     @Override
     protected void setNextTask() {
-        nextTask = 0; // or 1, or 2...
+        mNextTask = 0; // or 1, or 2...
     }
 
     @Override
