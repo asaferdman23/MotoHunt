@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -30,13 +31,14 @@ public class TeamSetActivity extends BasicActivity {
 
     @Override
     protected void setNextTask() {
-        mNextTask = 1; // Hint
+        mNextTask = 1;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_team);
+        Log.i("Asaf", "enters here again: ");
         init();
     }
 
@@ -45,12 +47,12 @@ public class TeamSetActivity extends BasicActivity {
         super.init();
         mTeam = findViewById(R.id.team_name_input);
         optionsList = getResources().getStringArray(R.array.options_list);
-        mTeamMemberName1 =(AutoCompleteTextView)findViewById(R.id.team_member_name1);
-        mTeamMemberName2 = (AutoCompleteTextView)findViewById(R.id.team_member_name2);
-        mTeamMemberName3 = (AutoCompleteTextView)findViewById(R.id.team_member_name3);
-        mTeamMemberName4 = (AutoCompleteTextView)findViewById(R.id.team_member_name4);
-        mTeamMemberName5 = (AutoCompleteTextView)findViewById(R.id.team_member_name5);
-        mTeamMemberName6 = (AutoCompleteTextView)findViewById(R.id.team_member_name6);
+        mTeamMemberName1 = (AutoCompleteTextView) findViewById(R.id.team_member_name1);
+        mTeamMemberName2 = (AutoCompleteTextView) findViewById(R.id.team_member_name2);
+        mTeamMemberName3 = (AutoCompleteTextView) findViewById(R.id.team_member_name3);
+        mTeamMemberName4 = (AutoCompleteTextView) findViewById(R.id.team_member_name4);
+        mTeamMemberName5 = (AutoCompleteTextView) findViewById(R.id.team_member_name5);
+        mTeamMemberName6 = (AutoCompleteTextView) findViewById(R.id.team_member_name6);
         mMembers = new HashSet<>();
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.select_dialog_item, optionsList);
         mTeamMemberName1.setThreshold(2);
@@ -94,11 +96,12 @@ public class TeamSetActivity extends BasicActivity {
 
     private void check(AutoCompleteTextView editName) {
         // if the editText is not good enough,show some toast.
-        if (editName == null || editName.getText().toString().isEmpty()) {
+        String nameWritten = editName.getText().toString();
+        if (nameWritten.isEmpty() || nameWritten.equalsIgnoreCase(String.valueOf(R.array.options_list))) {
+            Log.i("Asaf", "check stuck here : ");
             return;
         } else {
-            String name = editName.getText().toString();
-            mMembers.add(name);
+            mMembers.add(nameWritten);
             mTeamMembersCount++;
         }
     }
@@ -106,7 +109,7 @@ public class TeamSetActivity extends BasicActivity {
     private void saveTeam() {
         mSharedPreferences = getSharedPreferences("SHARED_PREF", Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = mSharedPreferences.edit();
-        edit.putString(TEAM_NAME, mTeam.getText().toString());
+        edit.putString(TEAM_NAME, mTeamName);
         edit.putInt(TEAM_COUNT, mTeamMembersCount);
         edit.putStringSet(MEMBERS, mMembers);
         edit.apply();

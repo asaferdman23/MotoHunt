@@ -118,15 +118,41 @@ public abstract class BasicActivity extends AppCompatActivity {
                 TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
 
         final Runnable mNextTaskRunnable = () -> {
+            Log.i("Asaf", "endActivity goes to mNextTask = : " + mNextTask);
             switch (mNextTask) {
-                case 0:   // QR Code
-                    Intent intent =new Intent(getApplicationContext(),CameraActivity.class);
-                    startActivity(intent);
+                case 0:
+                    Intent qrCodeIntent = new Intent(getApplicationContext(), CameraScannerActivity.class);
+                    startActivity(qrCodeIntent);
                     break;
-                case 1:             // Show Hint
-                    // something
+                case 1:   // QR Code
+                    Intent missionOneIntent = new Intent(getApplicationContext(), MissionOneClass.class);
+                    startActivity(missionOneIntent);
                     break;
-                case 2:             // next activity
+                case 2:
+                    // next activity
+                    // send intent to next activity
+                    break;
+                case 3:             // next activity
+                    // send intent to next activity
+                    break;
+                case 4:             // next activity
+                    // send intent to next activity
+                    break;
+                case 5:
+                    // send intent to the guess who activity next activity
+                    Intent guessWhoIntent = new Intent(getApplicationContext(), GuessWhoActivity.class);
+                    startActivity(guessWhoIntent);
+                    break;
+                case 6:             // next activity
+                    // send intent to next activity
+                    break;
+                case 7:             // next activity
+                    // send intent to next activity
+                    break;
+                case 8:             // next activity
+                    // send intent to next activity
+                    break;
+                case 9:             // next activity
                     // send intent to next activity
                     break;
                 default:

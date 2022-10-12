@@ -12,7 +12,7 @@ import com.sdsmdg.tastytoast.TastyToast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GuessWhoActivity extends BasicActivity implements ItemClickListener{
+public class GuessWhoActivity extends BasicActivity implements ItemClickListener {
 
     RecyclerView mRecyclerView;
     List<QuestionData> mQuestionList;
@@ -24,7 +24,7 @@ public class GuessWhoActivity extends BasicActivity implements ItemClickListener
 
     @Override
     protected void setNextTask() {
-        mNextTask = 0; // or 1, or 2...
+        mNextTask = 5; // or 1, or 2...
     }
 
     @Override
@@ -71,9 +71,9 @@ public class GuessWhoActivity extends BasicActivity implements ItemClickListener
         finishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (checkAll())
+                if (checkAll()) {
                     endActivity();
-                else {
+                } else {
                     TastyToast.makeText(getApplicationContext(), getResources().getString(R.string.didnt_finish),
                             TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
@@ -100,7 +100,7 @@ public class GuessWhoActivity extends BasicActivity implements ItemClickListener
     }
 
     protected void checkAns(int index, String ans) {
-        if (ans == null || ans.isEmpty() || !ansArr[index].equalsIgnoreCase(ans)){
+        if (ans == null || ans.isEmpty() || !ansArr[index].equalsIgnoreCase(ans)) {
             answeredCorrectly[index] = false;
             myAdapter.changePicByPos(R.drawable.box_x, index);
         } else {

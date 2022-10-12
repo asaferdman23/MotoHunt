@@ -18,7 +18,7 @@
         android:theme="@style/Theme.MotoHunt"
         tools:targetApi="31">
         <activity
-            android:name=".MissionClass"
+            android:name=".MissionManagerClass"
             android:exported="false" />
         <activity
             android:name=".PathChooserActivity"
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CameraActivity"
+            android:name=".CameraScannerActivity"
             android:exported="false" />
         <activity
             android:name=".CaptureClass"
@@ -40,9 +40,27 @@
         <activity
             android:name=".TeamSetActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustPan"/>
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".GuessWhoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MissionOneClass"
+            android:exported="true" />
+        <activity
+            android:name=".MissiontwoClass"
+            android:exported="true" />
+        <activity
+            android:name=".MissionThreeClass"
+            android:exported="true" />
+        <activity
+            android:name=".MissionFourClass"
+            android:exported="true" />
+        <activity
+            android:name=".MissionSixClass"
+            android:exported="true" />
+        <activity
+            android:name=".MissionSevenClass"
             android:exported="true" />
     </application>
 
