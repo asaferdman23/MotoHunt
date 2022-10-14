@@ -8,12 +8,8 @@
 
 
     <include
-        android:id="@+id/include2"
-        layout="@layout/title_bar"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/include_app_bar"
+        layout="@layout/toolbar" />
 
     <TextView
         android:id="@+id/mission_welcome_text"
@@ -27,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214"
+        app:layout_constraintVertical_bias="0.075"
         tools:ignore="HardcodedText,MissingConstraints" />
 
 
@@ -38,12 +34,13 @@
         android:gravity="center"
         android:text="@string/mission_1_content"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/include_app_bar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_bias="0.179"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -52,14 +49,28 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/mission_1_address"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        android:textColor="@color/motoBlue"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/include_app_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintVertical_bias="0.35"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/address_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -68,14 +79,28 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/mission_1_duration"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        android:textColor="@color/motoBlue"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.292"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
+        app:layout_constraintVertical_bias="0.429"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/duration_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -84,16 +109,28 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/mission_1_children"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        android:textColor="@color/motoBlue"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/include_app_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.207"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
         tools:ignore="MissingConstraints" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baby_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/include_app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/mission_one_final_text"
@@ -101,13 +138,14 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/mission_1_challenge"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintTop_toTopOf="@+id/include_app_bar"
+        app:layout_constraintVertical_bias="0.65"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -117,13 +155,28 @@
         android:gravity="center"
         android:text="@string/photo_mission_1_challenge"
         android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finish_mission_one"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:padding="10dp"
+        android:text="@string/finish_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.94" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

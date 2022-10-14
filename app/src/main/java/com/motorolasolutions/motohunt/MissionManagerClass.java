@@ -20,7 +20,6 @@ public class MissionManagerClass extends BasicActivity {
     String missionSelected;
     String pathSelected;
 
-
     @Override
     protected void setNextTask() {}
 
@@ -42,4 +41,5 @@ public class MissionManagerClass extends BasicActivity {
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
     }
+
 }

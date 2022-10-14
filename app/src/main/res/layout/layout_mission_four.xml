@@ -4,16 +4,355 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MissionManagerClass">
+    tools:context=".MissionManagerClass"
+    android:gravity="bottom">
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="100dp"
+        tools:ignore="MissingConstraints">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints"
+                android:fitsSystemWindows="true">
+
+                <EditText
+                    android:id="@+id/mission_four_input1"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input2"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input3"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input4"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input5"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input6"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input7"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+                <CheckBox
+                    android:id="@+id/switch7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input8"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input9"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/mission_four_input10"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="@string/answer_hint"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <CheckBox
+                    android:id="@+id/switch10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding ="10dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/finish_mission_four"
+                android:layout_width="337dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_shape"
+                android:text="@string/finish_button"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
 
     <include
-        android:id="@+id/include2"
-        layout="@layout/title_bar"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/include_app_bar"
+        layout="@layout/toolbar" />
 
     <TextView
         android:id="@+id/mission_welcome_text"
@@ -21,12 +360,14 @@
         android:layout_height="wrap_content"
         android:text="@string/mission_4"
         android:textColor="@color/motoBlue"
-        android:textSize="30dp"
+        android:textSize="25sp"
         android:textStyle="bold"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214"
+        app:layout_constraintVertical_bias="0.066"
         tools:ignore="HardcodedText,MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/mission_welcome_text"
+        android:id="@+id/mission7_welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mission_7"
@@ -29,4 +29,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.214"
         tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mission7_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mission_7_content_text"
+        android:textColor="@color/motoBlue"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finish_mission_seven_button"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:padding="10dp"
+        android:text="@string/finish_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824" />
 </androidx.constraintlayout.widget.ConstraintLayout>

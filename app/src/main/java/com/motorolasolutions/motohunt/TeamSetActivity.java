@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -13,7 +14,10 @@ import android.widget.Toast;
 
 import com.sdsmdg.tastytoast.TastyToast;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class TeamSetActivity extends BasicActivity {
@@ -73,7 +77,7 @@ public class TeamSetActivity extends BasicActivity {
         button.setOnClickListener(view -> {
             mTeamName = mTeam.getText().toString();
             if (mTeamName.isEmpty()) {
-                Toast.makeText(getApplicationContext(), "You can't leave this field empty", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "You can't leave an empty field", Toast.LENGTH_SHORT).show();
                 return;
             }
             mTeamMembersCount = 0;
@@ -87,23 +91,37 @@ public class TeamSetActivity extends BasicActivity {
                 saveTeam();
                 endActivity();
             } else {
-                // some toast that say something doesnt make sense
-                TastyToast.makeText(getApplicationContext(), getResources().getString(R.string.empty_field),
-                        TastyToast.LENGTH_LONG, TastyToast.ERROR);
+                TastyToast.makeText(getApplicationContext(),getResources().getString(R.string.empty_field) ,TastyToast.LENGTH_LONG, TastyToast.ERROR);
             }
+
         });
     }
 
     private void check(AutoCompleteTextView editName) {
         // if the editText is not good enough,show some toast.
         String nameWritten = editName.getText().toString();
-        if (nameWritten.isEmpty() || nameWritten.equalsIgnoreCase(String.valueOf(R.array.options_list))) {
+
+        if (nameWritten.isEmpty()) {
             Log.i("Asaf", "check stuck here : ");
             return;
         } else {
-            mMembers.add(nameWritten);
             mTeamMembersCount++;
+            mMembers.add(nameWritten);
         }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+    }
+
+    @Override
+    public boolean onKeyDown(int key_code, KeyEvent key_event) {
+        if (key_code == KeyEvent.KEYCODE_BACK) {
+            super.onKeyDown(key_code, key_event);
+            return true;
+        }
+        return false;
     }
 
     private void saveTeam() {

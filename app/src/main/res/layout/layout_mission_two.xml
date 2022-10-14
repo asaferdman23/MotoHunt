@@ -6,14 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MissionManagerClass">
 
-
     <include
-        android:id="@+id/include2"
-        layout="@layout/title_bar"
-        app:layout_constraintBottom_toTopOf="parent"
+        android:id="@+id/include_app_bar"
+        layout="@layout/toolbar" />
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/hapoel"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.396"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/mission_two_input"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/edit_text_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/answer_hint"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/mission_welcome_text"
@@ -21,12 +48,28 @@
         android:layout_height="wrap_content"
         android:text="@string/mission_2"
         android:textColor="@color/motoBlue"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.214"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        app:layout_constraintVertical_bias="0.1"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finish_mission_two_button"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:padding="10dp"
+        android:text="@string/finish_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/include_app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

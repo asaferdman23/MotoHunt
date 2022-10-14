@@ -7,13 +7,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
-import com.motorolasolutions.motohunt.databinding.LayoutMissionEightBinding;
 
 
 public class CameraScannerActivity extends BasicActivity {
@@ -71,7 +71,7 @@ public class CameraScannerActivity extends BasicActivity {
                     startActivity(intent);
                     break;
                 case "Hello2":
-                    Intent intent2 = new Intent(getApplicationContext(), MissiontwoClass.class);
+                    Intent intent2 = new Intent(getApplicationContext(), MissionTwoClass.class);
                     startActivity(intent2);
                     break;
                 case "Hello3":
@@ -102,5 +102,18 @@ public class CameraScannerActivity extends BasicActivity {
         } else {
             Toast.makeText(getApplicationContext(), R.string.wrong_qr_code, Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+    }
+
+    @Override
+    public boolean onKeyDown(int key_code, KeyEvent key_event) {
+        if (key_code== KeyEvent.KEYCODE_BACK) {
+            super.onKeyDown(key_code, key_event);
+            return true;
+        }
+        return false;
     }
 }

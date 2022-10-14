@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -129,10 +130,14 @@ public abstract class BasicActivity extends AppCompatActivity {
                     startActivity(missionOneIntent);
                     break;
                 case 2:
+                    Intent missionTwoIntent = new Intent(getApplicationContext(), MissionTwoClass.class);
+                    startActivity(missionTwoIntent);
                     // next activity
                     // send intent to next activity
                     break;
-                case 3:             // next activity
+                case 3:
+                    Intent missionThreeIntent = new Intent(getApplicationContext(), MissionThreeClass.class);
+                    startActivity(missionThreeIntent);// next activity
                     // send intent to next activity
                     break;
                 case 4:             // next activity
@@ -191,4 +196,17 @@ public abstract class BasicActivity extends AppCompatActivity {
             }
         });
     }
+//
+//    @Override
+//    public void onBackPressed() {
+//    }
+//
+//    @Override
+//    public boolean onKeyDown(int key_code, KeyEvent key_event) {
+//        if (key_code== KeyEvent.KEYCODE_BACK) {
+//            super.onKeyDown(key_code, key_event);
+//            return true;
+//        }
+//        return false;
+//    }
 }

@@ -6,22 +6,25 @@
     <string name="button">Set our MotoTeam!</string>
     <string name="set_moto_team_button">1,2,3 MotoTeam!</string>
     <string name="finish_button">Finish!</string>
+    <string name="answer_hint">Write Your answer here</string>
     <string name="name_team_member">Team member</string>
     <string name="cancel_dialog_btn">Cancel</string>
     <string name="continue_dialog_btn">Got it!</string>
-    <string name="ans_string_arr" />
+    <string name="ans_string_arr">One of the names is not correct</string>
     <string name="end_activity">Success! Good job!</string>
-    <string name="empty_field">Please fill the blank fields in MotoTask!</string>
+    <string name="empty_field">Check the names or fill the blank fields in MotoTask!</string>
     <string name="didnt_finish">Please fill the blank fields the MotoTask!</string>
     <string name="flash_option">For flash use volume up key</string>
     <string name="wrong_qr_code">Oops i can\'t scan it</string>
     <string name="try_again">Try again</string>
+    <string name="wrong_number">Wrong number ! try again</string>
     <string name="mission_1_content">Each group member must write on a separate page the following data about himself</string>
     <string name="mission_1_address">1.Address</string>
     <string name="mission_1_duration">2.Duration of work at Motorola</string>
     <string name="mission_1_children">3.Number of children</string>
-    <string name="mission_1_challenge">For each category, you must take a photo in ascending order and send the photos to Dor Peretz-</string>
+    <string name="mission_1_challenge">For each category, you must take a photo in ascending order and send the photos to Dor Peretz</string>
     <string name="photo_mission_1_challenge">Take the photos with the paper that you wrote the data on</string>
+    <string name="mission_three_content">You must arrange the answers in the order that the device was released to the industry</string>
     <string name="mission_1">Here Is Your First Mission!</string>
     <string name="mission_2">Here Is Your Second Mission!</string>
     <string name="mission_3">Here Is Your Third Mission!</string>
@@ -29,6 +32,7 @@
     <string name="mission_5">Here Is Your Fifth Mission!</string>
     <string name="mission_6">Here Is Your Sixth Mission!</string>
     <string name="mission_7">Here Is Your Seventh Mission!</string>
+    <string name="mission_7_content_text">You have to film someone that will say the Motorola vision sentence</string>
     <string name="mission_8">Here Is Your Eight And Last Mission!</string>
 
     <string-array name="options_list">
