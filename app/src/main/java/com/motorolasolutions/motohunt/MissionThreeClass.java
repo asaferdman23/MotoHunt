@@ -14,6 +14,7 @@ public class MissionThreeClass extends BasicActivity {
     Button mFinishBtn;
     EditText mAnswerOne, mAnswerTwo, mAnswerThree, mAnswerFour, mAnswerFive;
     int checking =0;
+
     @Override
     protected void setNextTask() {
         mNextTask = 3;
