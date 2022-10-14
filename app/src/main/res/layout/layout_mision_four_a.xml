@@ -10,10 +10,25 @@
         android:id="@+id/include_app_bar"
         layout="@layout/toolbar" />
 
+    <TextView
+        android:id="@+id/mission4_welcome_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mission_4"
+        android:textColor="@color/motoBlue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
     <ListView
         android:id="@+id/list_view_data"
-        android:layout_width="405dp"
-        android:layout_height="652dp"
+        android:layout_width="wrap_content"
+        android:layout_height="450dp"
         android:choiceMode="multipleChoice"
         android:divider="@null"
         android:dividerHeight="0dp"
@@ -21,6 +36,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finish_mission_four_a"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:padding="10dp"
+        android:text="@string/finish_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98" />
 </androidx.constraintlayout.widget.ConstraintLayout>
