@@ -3,13 +3,11 @@ package com.motorolasolutions.motohunt;
 
 public class Answers {
     int editTexts;
-    String answer;
     int checkBox;
 
 
     public Answers(int editText ,int checkBox) {
         this.editTexts = editText;
-        this.answer = answer;
         this.checkBox = checkBox;
     }
 
@@ -20,14 +18,6 @@ public class Answers {
 
     public void setEditText(int editTexts) {
         this.editTexts = editTexts;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
     }
 
     public int getCheckBox() {
