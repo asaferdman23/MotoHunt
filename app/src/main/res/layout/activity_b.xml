@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BActivity">
+
+    <include
+        android:id="@+id/include_app_bar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/b_activity_textView"
+            android:layout_width="161dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="100dp"
+            android:text="@string/activity_b_title"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/imageView_b"
+            android:layout_width="323dp"
+            android:layout_height="302dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="348dp"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:hint="@string/placeholder"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:textColorHint="#757575"
+                tools:ignore="Autofill" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="@string/button_b"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include
+        android:id="@+id/include_timer"
+        layout="@layout/timer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
