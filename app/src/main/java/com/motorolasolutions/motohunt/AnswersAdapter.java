@@ -25,9 +25,9 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.MyViewHo
     CheckBox checkBox;
     Button checkAnswerButton;
     String writtenAnswer;
-     boolean isTextChanges= false;
+    boolean isTextChanges = false;
 
-    private ArrayList<Answers>answersEditText;
+    private ArrayList<Answers> answersEditText;
 
     ArrayList<String> answersArrayContent = new ArrayList<String>();
 
@@ -42,26 +42,27 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.MyViewHo
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            editText =itemView.findViewById(R.id.mission_four_input1a);
-            checkBox =itemView.findViewById(R.id.checkbox);
+            editText = itemView.findViewById(R.id.mission_four_input1a);
+            checkBox = itemView.findViewById(R.id.checkbox);
         }
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view =LayoutInflater.from(parent.getContext()).inflate(R.layout.listview_adapter,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.listview_adapter, parent, false);
         mContext = parent.getContext();
         rootView = ((Activity) mContext).getWindow().getDecorView().findViewById(android.R.id.content);
-        checkAnswerButton =rootView.findViewById(R.id.finishbutton_mission_four);
+        checkAnswerButton = rootView.findViewById(R.id.finishbutton_mission_four);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         EditText editText = holder.editText;
-        CheckBox checkBox= holder.checkBox;
+        CheckBox checkBox = holder.checkBox;
         int idForEditTexts = answersEditText.get(position).getEditText();
+        Log.i("asaf", "idForEditTexts size is = : " + idForEditTexts);
         int idForCheckboxes = answersEditText.get(position).getCheckBox();
 
 
@@ -73,31 +74,43 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.MyViewHo
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                isTextChanges =true;
+                isTextChanges = true;
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
                 writtenAnswer = editable.toString();
-                //answersArrayContent.add(writtenAnswer);
-                Log.i("asaf", "afterTextChanged: the array is = ");
+                if (isTextChanges) {
+                    isTextChanges = false;
+                }
+                for (int i=0;i<=idForEditTexts;i++){
+                    answersArrayContent.set(idForEditTexts,writtenAnswer);
+                }
+
             }
         });
 
         checkAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!answersArrayContent.isEmpty()){
-                  for (int i =0;i<=answersArrayContent.size();i++){
-
-                  }
-                }
-                else {
-                    Toast.makeText(mContext.getApplicationContext(), "vfdfgfng",Toast.LENGTH_SHORT).show();
+                ArrayList<String> mAnswersListContent = new ArrayList<>();
+                if (!answersArrayContent.isEmpty()) {
+                    for (int i=0;i<=answersArrayContent.size();i++){
+                        if (!answersArrayContent.get(i).isEmpty()){
+                            mAnswersListContent.add(answersArrayContent.get(i));
+                        } else {
+                            return;
+                        }
+                    }
+                    //answersArrayContent.set(idForEditTexts, writtenAnswer);
+                    Log.i("asaf", "checkAnswerButton: " + answersArrayContent);
+                } else {
+                    Toast.makeText(mContext.getApplicationContext(), "vfdfgfng", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
     @Override
     public int getItemCount() {
         return answersEditText.size();
