@@ -34,9 +34,6 @@
     <string name="mission_7">Here Is Your Seventh Mission!</string>
     <string name="mission_7_content_text">You have to film someone that will say the Motorola vision sentence</string>
     <string name="mission_8">Here Is Your Eight And Last Mission!</string>
-    <string name="placeholder">Placeholder</string>
-    <string name="activity_b_title">Activity B</string>
-    <string name="button_b">BUTTON</string>
 
     <string-array name="options_list">
         <item>Dor Perets</item>
