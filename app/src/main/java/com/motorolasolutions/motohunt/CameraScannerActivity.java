@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,16 +24,16 @@ public class CameraScannerActivity extends BasicActivity {
     SharedPreferences mSharedPreferences;
     TextView welcomeText;
     Button mOpenCameraButton;
+    ImageView mHintImage;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
-
         welcomeText = findViewById(R.id.welcome_text);
         mOpenCameraButton = findViewById(R.id.open_camera_button);
-
+        mHintImage=findViewById(R.id.hint_picture);
         mOpenCameraButton.setOnClickListener(v -> {
             IntentIntegrator intentIntegrator = new IntentIntegrator(this);
             //Set flash option
@@ -42,6 +43,7 @@ public class CameraScannerActivity extends BasicActivity {
             intentIntegrator.setCaptureActivity(CaptureClass.class);
             intentIntegrator.initiateScan();
         });
+        hintsPicker();
     }
 
     private void saveMissionNumber() {
@@ -49,6 +51,38 @@ public class CameraScannerActivity extends BasicActivity {
         SharedPreferences.Editor edit = mSharedPreferences.edit();
         edit.putString(MISSION_NUMBER, selectedMission);
         edit.apply();
+    }
+
+    public void hintsPicker() {
+        Intent mNextMissionIntent = getIntent();
+        String hintPicker = mNextMissionIntent.getStringExtra("nextTaskString");
+        Log.i("asaf", "hintsPicker: " + hintPicker);
+        switch (hintPicker) {
+            case "class com.motorolasolutions.motohunt.TeamSetActivity":
+                mHintImage.setImageResource(R.drawable.hint_1);
+                break;
+                case "class com.motorolasolutions.motohunt.MissionOneClass":
+                mHintImage.setImageResource(R.drawable.hint_2);
+                break;
+            case "class com.motorolasolutions.motohunt.MissionTwoClass":
+                mHintImage.setImageResource(R.drawable.hint_3);
+                break;
+            case "class com.motorolasolutions.motohunt.MissionThreeClass":
+                mHintImage.setImageResource(R.drawable.hint_4);
+                break;
+            case "class com.motorolasolutions.motohunt.MissionFourClass":
+                mHintImage.setImageResource(R.drawable.hint_5);
+                break;
+            case "class com.motorolasolutions.motohunt.MissionFiveClass":
+                mHintImage.setImageResource(R.drawable.hint_6);
+                break;
+            case "class com.motorolasolutions.motohunt.MissionSixClass":
+                mHintImage.setImageResource(R.drawable.hint_7);
+                break;
+            case "class com.motorolasolutions.motohunt.MissionSevenClass":
+                mHintImage.setImageResource(R.drawable.hint_8);
+                break;
+        }
     }
 
     @Override
@@ -110,7 +144,7 @@ public class CameraScannerActivity extends BasicActivity {
 
     @Override
     public boolean onKeyDown(int key_code, KeyEvent key_event) {
-        if (key_code== KeyEvent.KEYCODE_BACK) {
+        if (key_code == KeyEvent.KEYCODE_BACK) {
             super.onKeyDown(key_code, key_event);
             return true;
         }

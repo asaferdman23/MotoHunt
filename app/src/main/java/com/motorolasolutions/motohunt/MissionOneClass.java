@@ -31,8 +31,7 @@ public class MissionOneClass extends BasicActivity {
                 builder1.setPositiveButton("Yes",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                mNextTask = 0;
-                                finish();
+                                endActivity();
                             }
                         });
                 builder1.setNegativeButton(

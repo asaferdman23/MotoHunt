@@ -123,6 +123,8 @@ public abstract class BasicActivity extends AppCompatActivity {
             switch (mNextTask) {
                 case 0:
                     Intent qrCodeIntent = new Intent(getApplicationContext(), CameraScannerActivity.class);
+                    qrCodeIntent.putExtra("nextTaskString",getClass().toString());
+                    Log.i("asaf", "endActivity: sending intent with name =" +getClass().toString());
                     startActivity(qrCodeIntent);
                     break;
                 case 1:   // QR Code
