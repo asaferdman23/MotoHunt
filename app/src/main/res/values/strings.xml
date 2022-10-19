@@ -46,28 +46,27 @@
     <string name="answer_j">J!</string>
 
     <string-array name="options_list">
-        <item>Dor Perets</item>
         <item>Asaf Erdman</item>
         <item>Esti Kadison</item>
         <item>Evitar Gueta</item>
         <item>Eitan Tugy</item>
         <item>Dor Perets</item>
         <item>Yulia Louzon</item>
-        <item> Yossi BenAri</item>
-        <item>Yoram.Zeev</item>
+        <item>Yossi Ben-Ari</item>
+        <item>Yoram Zeev</item>
         <item>Eilon Eyal</item>
         <item>Yakir Nahum</item>
         <item>Lior Ashkenazy</item>
-        <item> Alexandr Spivak</item>
+        <item>Alexandr Spivak</item>
         <item>Ella Grad</item>
         <item>Hodaya Sror</item>
-        <item> Adam Gilboa</item>
+        <item>Adam Gilboa</item>
         <item>Avner Carmeli</item>
         <item>Yehuda Aleiner</item>
-        <item>kfir</item>
-        <item> Leonid Nikolaev</item>
+        <item>Kfir Hayman</item>
+        <item>Leonid Nikolaev</item>
         <item>Oren Afriat</item>
-        <item>Alex F</item>
+        <item>Alex Friedman</item>
         <item>Andrei Aluf</item>
         <item>Eylon Heiman</item>
         <item>Dvir Gozlan</item>
@@ -77,20 +76,20 @@
         <item>Guy Burko</item>
         <item>Leonid Avdeev</item>
         <item>Ronit Peleg</item>
-        <item> Neomi Sher</item>
+        <item>Neomi Sher</item>
         <item>Pavlo Yaroshevich</item>
         <item>Svetlana Dimenshtein</item>
         <item>Chen Carmiel</item>
-        <item>Sigalit Leybam</item>
+        <item>Sigalit Leybman</item>
         <item>Yossi Mizrahi</item>
         <item>Igor Gorodetsky</item>
-        <item> Alon Meron</item>
+        <item>Alon Meron</item>
         <item>Alena Auslender</item>
         <item>Eden Herman</item>
         <item>Michael Medvedev</item>
         <item>Rita Gurevich</item>
         <item>lior medina</item>
-        <item>Gilerman Anna</item>
+        <item>Anna Gilerman</item>
         <item>Peretz Mahal</item>
         <item>Rafi Tzidon</item>
         <item>Snir Sadd</item>
@@ -99,7 +98,7 @@
         <item>Liron Meshulami</item>
         <item>Hanania Zarour</item>
         <item>Michael Madar</item>
-        <item>Bredesku Daniil</item>
+        <item>Daniil Bredesku</item>
         <item>Michael Rakhman</item>
         <item>Oleg Olshanechky</item>
         <item>Pavel Kotiai</item>
@@ -107,11 +106,11 @@
         <item>Guy Rosen</item>
         <item>Benny Malka</item>
         <item>Hadad Maor</item>
-        <item> Rais Or Tsof</item>
-        <item>Mihail gadasin</item>
-        <item>Kahlon Meitar</item>
+        <item>Rais Or Tsof</item>
+        <item>Mihail Gadasin</item>
+        <item>Meitar Kahlon</item>
         <item>Alexander Parfenchikov</item>
-        <item>Bendavid Talmor</item>
+        <item>Talmor Ben-David</item>
         <item>Yarin Halili</item>
     </string-array>
 
@@ -122,38 +121,38 @@
 
 
     <string-array name="answer_list_guess_who">
-        <item>placeholder_answer_1</item>
-        <item>placeholder_answer_2</item>
-        <item>placeholder_answer_3</item>
-        <item>placeholder_answer_4</item>
-        <item>placeholder_answer_5</item>
-        <item>placeholder_answer_6</item>
-        <item>placeholder_answer_7</item>
-        <item>placeholder_answer_8</item>
-        <item>placeholder_answer_9</item>
-        <item>placeholder_answer_10</item>
-        <item>placeholder_answer_11</item>
-        <item>placeholder_answer_12</item>
-        <item>placeholder_answer_13</item>
+        <item>Lives in Dafna</item>
+        <item>Allergic to peanuts</item>
+        <item>Movie director &amp; producer</item>
+        <item>Father of Israeli Judo's champion (youth)</item>
+        <item>Met his wife at Motorola</item>
+        <item>Lived in USA for 5 years</item>
+        <item>Crossfit trainer</item>
+        <item>Performed (amazingly) with Eli &amp; Mariano on stage</item>
+        <item>Married to kindergarten teacher and acts like a child</item>
+        <item>Speaks German fluently</item>
+        <item>Starring in Motorola's basketball team</item>
+        <item>Got engaged 2 weeks ago! (Congratulations!)</item>
+        <item>Wedding postponed twice due to Covid-19 </item>
         <item>placeholder_answer_14</item>
         <item>placeholder_answer_15</item>
         <item>placeholder_answer_16</item>
     </string-array>
 
     <string-array name="questions_list_guess_who">
-        <item>placeholder_question_1</item>
-        <item>placeholder_question_2</item>
-        <item>placeholder_question_3</item>
-        <item>placeholder_question_4</item>
-        <item>placeholder_question_5</item>
-        <item>placeholder_question_6</item>
-        <item>placeholder_question_7</item>
-        <item>placeholder_question_8</item>
-        <item>placeholder_question_9</item>
-        <item>placeholder_question_10</item>
-        <item>placeholder_question_11</item>
-        <item>placeholder_question_12</item>
-        <item>placeholder_question_13</item>
+        <item>Eilon Eyal</item>
+        <item>Liron Meshulami</item>
+        <item>David Ben-Ari</item>
+        <item>Guy Burko</item>
+        <item>Alex Friedman</item>
+        <item>Talmor Ben-David</item>
+        <item>Meitar Kahlon</item>
+        <item>Maayan Maya BenGal</item>
+        <item>Yakir Nahum</item>
+        <item>Alexander Parfenchikov</item>
+        <item>Michael Madar</item>
+        <item>Sigalit Laybman</item>
+        <item>Dor Perets</item>
         <item>placeholder_question_14</item>
         <item>placeholder_question_15</item>
         <item>placeholder_question_16</item>
