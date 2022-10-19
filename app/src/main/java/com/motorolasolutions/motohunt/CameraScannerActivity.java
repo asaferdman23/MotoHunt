@@ -56,7 +56,6 @@ public class CameraScannerActivity extends BasicActivity {
     public void hintsPicker() {
         Intent mNextMissionIntent = getIntent();
         String hintPicker = mNextMissionIntent.getStringExtra("nextTaskString");
-        Log.i("asaf", "hintsPicker: " + hintPicker);
         switch (hintPicker) {
             case "class com.motorolasolutions.motohunt.TeamSetActivity":
                 mHintImage.setImageResource(R.drawable.hint_1);

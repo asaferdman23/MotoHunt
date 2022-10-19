@@ -1,6 +1,5 @@
 package com.motorolasolutions.motohunt;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.rm.rmswitch.RMAbstractSwitch;
 import com.rm.rmswitch.RMTristateSwitch;
 
 import java.util.ArrayList;
@@ -21,6 +21,7 @@ public class MissionFourClass extends BasicActivity {
     RMTristateSwitch[] mSwitchesArray;
     ArrayList<String> mAnswerValues;
     boolean[] singleValid;
+    private String switchTextID;
     private static final String ANSWER_ONE = String.valueOf(R.string.answer_a);
     private static final String ANSWER_TWO = String.valueOf(R.string.answer_b);
     private static final String ANSWER_THREE = String.valueOf(R.string.answer_c);
@@ -40,16 +41,7 @@ public class MissionFourClass extends BasicActivity {
         initSwitchesArray();
         mFinishMissionFour = findViewById(R.id.finish_mission_four);
         mFinishMissionFour.setOnClickListener(view -> {
-            boolean configValid = true;
-            for (int i = 0; i < OPTIONS_NUM; i++) {
-                configValid &= singleValid[i];
-            }
-            if (configValid) {
-                Toast.makeText(getApplicationContext(), "I got your answer, and thinking.", Toast.LENGTH_LONG).show();
-            }else {
-                createDialog(false, "Dsds");
-            }
-
+            checkSwitch();
         });
     }
     private void createDialog(boolean mState, String msg) {
@@ -72,20 +64,16 @@ public class MissionFourClass extends BasicActivity {
         init();
     }
     private void checkSwitch() {
-//       int options;
-//       switch (options){
-//           case 1:
-//
-//       }
-
-
-//        mSwitchesArray[index].setState(checked ? RMTristateSwitch.STATE_LEFT : RMTristateSwitch.STATE_RIGHT);
-//        singleValid[index] = checked;
+        for (int i = 1; i <OPTIONS_NUM; i++) {
+            if (i==1 || i==3 || i==4){
+                Toast.makeText(getApplicationContext(),"Youve got some wrong answer",Toast.LENGTH_SHORT).show();
+            }
+            mSwitchesArray[i].setState(RMAbstractSwitch.STATE_MIDDLE);
+        }
     }
 
     private void initSwitchesArray() {
         mSwitchesArray = new RMTristateSwitch [OPTIONS_NUM];
-        String switchTextID;
         for (int i = 1; i <OPTIONS_NUM; i++) {
             switchTextID = "switch"+i;
             mSwitchesArray[i] = findViewById(getResources().getIdentifier(switchTextID, "id", getPackageName()));
