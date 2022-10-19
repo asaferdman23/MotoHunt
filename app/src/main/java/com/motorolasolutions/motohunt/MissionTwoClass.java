@@ -56,9 +56,10 @@ public class MissionTwoClass extends BasicActivity {
             public void onClick(View view) {
                 String solutionGuess = missionTwoInput.getText().toString();
                 if (solutionGuess.equals(theSolution)) {
-
+                    isFinishedTask = true;
                     endActivity();
                 } else {
+                    isFinishedTask = false;
                     TastyToast.makeText(getApplicationContext(), "Wrong , Try again! ", TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
             }

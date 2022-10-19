@@ -62,9 +62,11 @@ public class MissionThreeClass extends BasicActivity {
                         answer3.equalsIgnoreCase(getResources().getString(R.string.answer_3_prince)) && answer4.equalsIgnoreCase(getResources().getString(R.string.answer_4_lex)) &&
                         answer5.equalsIgnoreCase(getResources().getString(R.string.answer_5_stryker))) {
                     Log.i("asaf", "onClick needs to go end activity: ");
+                    isFinishedTask = true;
                     mNextTask = 0;
                     endActivity();
                 } else {
+                    isFinishedTask = false;
                     TastyToast.makeText(getApplicationContext(), "Wrong answer!", TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
             }

@@ -14,6 +14,8 @@ import com.rm.rmswitch.RMTristateSwitch;
 
 import java.util.ArrayList;
 
+import javax.security.auth.login.LoginException;
+
 public class MissionFourClass extends BasicActivity {
     private static final int OPTIONS_NUM = 10;
     Button mFinishMissionFour;
@@ -21,7 +23,7 @@ public class MissionFourClass extends BasicActivity {
     RMTristateSwitch[] mSwitchesArray;
     ArrayList<String> mAnswerValues;
     boolean[] singleValid;
-    static boolean isRight = false;
+    boolean isRight = false;
     private String switchTextID;
     private static final String TAG = "MissionFourClass";
 
@@ -31,9 +33,17 @@ public class MissionFourClass extends BasicActivity {
         singleValid = new boolean[OPTIONS_NUM];
         initSwitchesArray();
         mFinishMissionFour = findViewById(R.id.finish_mission_four);
+        //checkSwitch();
+
         mFinishMissionFour.setOnClickListener(view -> {
-            checkSwitch();
             //createDialog(true, isTouched? "Great!" : "Shit!");
+            Log.i("asaf", "the boolean isRight = dffdfdfdf" +isRight);
+            if (isRight) {
+                mNextTask = 0;
+                endActivity();
+            } else {
+                createDialog(false, "Try again!");
+            }
         });
     }
 
@@ -57,30 +67,6 @@ public class MissionFourClass extends BasicActivity {
         init();
     }
 
-    private void checkSwitch() {
-        for (int i = 0; i < OPTIONS_NUM; i++) {
-            int finalI = i;
-            mSwitchesArray[i].addSwitchObserver(new RMTristateSwitch.RMTristateSwitchObserver() {
-                @Override
-                public void onCheckStateChange(RMTristateSwitch switchView, @RMTristateSwitch.State int state) {
-                    if ((finalI == 0 && state == RMTristateSwitch.STATE_LEFT) && (finalI == 1 && state == RMTristateSwitch.STATE_LEFT) && (finalI == 3 && state == RMTristateSwitch.STATE_LEFT) && (finalI == 5 && state == RMTristateSwitch.STATE_LEFT)
-                        && (finalI == 2 && state == RMTristateSwitch.STATE_RIGHT) && (finalI == 4 && state == RMTristateSwitch.STATE_RIGHT) && (finalI ==6 && state == RMTristateSwitch.STATE_RIGHT) && (finalI == 7 && state == RMTristateSwitch.STATE_RIGHT)
-                    && (finalI == 8 && state == RMTristateSwitch.STATE_RIGHT) &&(finalI == 9 && state == RMTristateSwitch.STATE_RIGHT)) {
-                        isRight = true;
-                    } else {
-                        isRight =false;
-                    }
-                }
-            });
-        }
-        if (isRight) {
-            mNextTask = 0;
-            endActivity();
-        } else {
-            createDialog(false, "Try again!");
-        }
-    }
-
     private void initSwitchesArray() {
         mSwitchesArray = new RMTristateSwitch[OPTIONS_NUM];
         for (int i = 0; i < OPTIONS_NUM; i++) {
@@ -90,6 +76,21 @@ public class MissionFourClass extends BasicActivity {
             mSwitchesArray[i].setState(RMAbstractSwitch.STATE_MIDDLE);
         }
     }
+
+//    private void checkSwitch() {
+//        for (int i = 0; i < OPTIONS_NUM; i++) {
+//            int finalI = i;
+//            mSwitchesArray[i].addSwitchObserver(new RMTristateSwitch.RMTristateSwitchObserver() {
+//                @Override
+//                public void onCheckStateChange(RMTristateSwitch switchView, @RMTristateSwitch.State int state) {
+//                    int id = finalI;
+//                    if (mSwitchesArray[id].getState(RMAbstractSwitch.STATE_lef)){
+//                        Log.i("asaf", "onCheckStateChange: finalI =" + id);
+//                    }
+//                }
+//            });
+//        }
+//    }
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {

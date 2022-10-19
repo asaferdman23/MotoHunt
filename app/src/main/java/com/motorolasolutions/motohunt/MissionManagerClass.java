@@ -3,7 +3,6 @@ package com.motorolasolutions.motohunt;
 import static com.motorolasolutions.motohunt.CameraScannerActivity.MISSION_NUMBER;
 import static com.motorolasolutions.motohunt.CameraScannerActivity.selectedMission;
 import static com.motorolasolutions.motohunt.PathChooserActivity.OPTIONS;
-import static com.motorolasolutions.motohunt.PathChooserActivity.spinnerContent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,7 +30,6 @@ public class MissionManagerClass extends BasicActivity {
         mSharedPreferences = getSharedPreferences("OPTION", Context.MODE_PRIVATE);
         missionSelected = mSharedPreferences.getString(MISSION_NUMBER, selectedMission);
         Log.i("asaf", "missionSelected from onCreate is : " + missionSelected);
-        pathSelected = mSharedPreferences.getString(OPTIONS, spinnerContent);
         youArrived = findViewById(R.id.mission_welcome_text);
 
 

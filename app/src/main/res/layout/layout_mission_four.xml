@@ -67,7 +67,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_2"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -96,7 +96,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_3"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -125,7 +125,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_4"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -154,7 +154,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_5"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -183,7 +183,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_6"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -212,7 +212,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_7"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -241,7 +241,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_8"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -270,7 +270,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_9"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -299,7 +299,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_10"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch

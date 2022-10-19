@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,7 +24,7 @@ public class PathChooserActivity extends AppCompatActivity implements AdapterVie
     Spinner spinner;
     public static final String OPTIONS = "OPTIONS";
     public static final String OPTION = "OPTION";
-    public static String spinnerContent;
+    String spinnerContent;
     // private static final String TEAM_COUNT = "TEAM_COUNT";
 
     @Override
@@ -35,7 +36,6 @@ public class PathChooserActivity extends AppCompatActivity implements AdapterVie
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        spinnerContent =spinner.getSelectedItem().toString();
         mFinishButton= findViewById(R.id.set_your_route_button);
         mWelcomeText =findViewById(R.id.welcome_text);
 
@@ -58,9 +58,12 @@ public class PathChooserActivity extends AppCompatActivity implements AdapterVie
     }
 
     private void saveOption() {
+        spinnerContent =spinner.getSelectedItem().toString();
         mSharedPreferences = getSharedPreferences(OPTION, Context.MODE_PRIVATE);
         SharedPreferences.Editor edit = mSharedPreferences.edit();
         edit.putString(OPTIONS, spinnerContent);
+        String spin=spinnerContent;
+        Log.i("asaf", "saveOption: is" +spin );
         edit.apply();
     }
 }

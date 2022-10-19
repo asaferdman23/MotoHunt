@@ -1,5 +1,9 @@
 package com.motorolasolutions.motohunt;
 
+import static com.motorolasolutions.motohunt.PathChooserActivity.OPTION;
+import static com.motorolasolutions.motohunt.PathChooserActivity.OPTIONS;
+
+
 import androidx.annotation.Nullable;
 
 import android.content.Context;
@@ -25,7 +29,8 @@ public class CameraScannerActivity extends BasicActivity {
     TextView welcomeText;
     Button mOpenCameraButton;
     ImageView mHintImage;
-
+    String mPathSelected;
+    String spinnerSharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,35 +57,70 @@ public class CameraScannerActivity extends BasicActivity {
         edit.putString(MISSION_NUMBER, selectedMission);
         edit.apply();
     }
-
+    private void getOption() {
+//        mSharedPreferences = getSharedPreferences("OPTION", Context.MODE_PRIVATE);
+        mSharedPreferences = getSharedPreferences(OPTION, Context.MODE_PRIVATE);
+        mPathSelected = mSharedPreferences.getString(OPTIONS, spinnerSharedPref);
+        Log.i("asaf", "getOption: is " +mPathSelected);
+    }
     public void hintsPicker() {
+        getOption();
         Intent mNextMissionIntent = getIntent();
         String hintPicker = mNextMissionIntent.getStringExtra("nextTaskString");
-        switch (hintPicker) {
-            case "class com.motorolasolutions.motohunt.TeamSetActivity":
-                mHintImage.setImageResource(R.drawable.hint_1);
-                break;
+        if (mPathSelected.equals("A")) {
+            switch (hintPicker) {
+                case "class com.motorolasolutions.motohunt.TeamSetActivity":
+                    mHintImage.setImageResource(R.drawable.hint_1);
+                    break;
                 case "class com.motorolasolutions.motohunt.MissionOneClass":
-                mHintImage.setImageResource(R.drawable.hint_2);
-                break;
-            case "class com.motorolasolutions.motohunt.MissionTwoClass":
-                mHintImage.setImageResource(R.drawable.hint_3);
-                break;
-            case "class com.motorolasolutions.motohunt.MissionThreeClass":
-                mHintImage.setImageResource(R.drawable.hint_4);
-                break;
-            case "class com.motorolasolutions.motohunt.MissionFourClass":
-                mHintImage.setImageResource(R.drawable.hint_5);
-                break;
-            case "class com.motorolasolutions.motohunt.MissionFiveClass":
-                mHintImage.setImageResource(R.drawable.hint_6);
-                break;
-            case "class com.motorolasolutions.motohunt.MissionSixClass":
-                mHintImage.setImageResource(R.drawable.hint_7);
-                break;
-            case "class com.motorolasolutions.motohunt.MissionSevenClass":
-                mHintImage.setImageResource(R.drawable.hint_8);
-                break;
+                    mHintImage.setImageResource(R.drawable.hint_2);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionTwoClass":
+                    mHintImage.setImageResource(R.drawable.hint_3);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionThreeClass":
+                    mHintImage.setImageResource(R.drawable.hint_4);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionFourClass":
+                    mHintImage.setImageResource(R.drawable.hint_5);
+                    break;
+                case "class com.motorolasolutions.motohunt.GuessWhoActivity":
+                    mHintImage.setImageResource(R.drawable.hint_6);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionSixClass":
+                    mHintImage.setImageResource(R.drawable.hint_7);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionSevenClass":
+                    mHintImage.setImageResource(R.drawable.hint_8);
+                    break;
+            }
+        } else {
+            switch (hintPicker) {
+                case "class com.motorolasolutions.motohunt.TeamSetActivity":
+                    mHintImage.setImageResource(R.drawable.hint_7);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionOneClass":
+                    mHintImage.setImageResource(R.drawable.hint_8);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionTwoClass":
+                    mHintImage.setImageResource(R.drawable.hint_1);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionThreeClass":
+                    mHintImage.setImageResource(R.drawable.hint_2);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionFourClass":
+                    mHintImage.setImageResource(R.drawable.hint_3);
+                    break;
+                case "class com.motorolasolutions.motohunt.GuessWhoActivity":
+                    mHintImage.setImageResource(R.drawable.hint_4);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionSixClass":
+                    mHintImage.setImageResource(R.drawable.hint_6);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionSevenClass":
+                    mHintImage.setImageResource(R.drawable.hint_5);
+                    break;
+            }
         }
     }
 
