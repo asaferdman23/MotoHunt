@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.sdsmdg.tastytoast.TastyToast;
 
 
 public class CameraScannerActivity extends BasicActivity {
@@ -134,7 +135,7 @@ public class CameraScannerActivity extends BasicActivity {
         super.onActivityResult(requestCode, resultCode, data);
         IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         String content = intentResult.getContents();
-        if (content != null) {
+        if (content != null && isFinishedTask) {
             selectedMission = content;
             saveMissionNumber();
             Log.i("asaf", "taking onActivityResult from : " + selectedMission);
@@ -172,8 +173,8 @@ public class CameraScannerActivity extends BasicActivity {
                     startActivity(intent8);
                     break;
             }
-        } else {
-            Toast.makeText(getApplicationContext(), R.string.wrong_qr_code, Toast.LENGTH_SHORT).show();
+        } else if (!isFinishedTask){
+            TastyToast.makeText(CameraScannerActivity.this, "You can't move to another mission! ", TastyToast.LENGTH_LONG,TastyToast.ERROR).show();
         }
     }
 
