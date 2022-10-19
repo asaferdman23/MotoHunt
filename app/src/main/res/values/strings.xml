@@ -43,7 +43,21 @@
     <string name="answer_g">G!</string>
     <string name="answer_h">H!</string>
     <string name="answer_i">I!</string>
-    <string name="answer_j">J!</string>
+    <string name="answer_1_mirs">Mirs</string>
+    <string name="answer_2_apx_next">APX Next</string>
+    <string name="answer_3_prince">Prince</string>
+    <string name="answer_4_lex">Lex</string>
+    <string name="answer_5_stryker">Stryker</string>
+    <string name="answer_1">Motorola\'s "big split" happened in 2010</string>
+    <string name="answer_2">Motorola was founded in 1939</string>
+    <string name="answer_3">The first branch of Motorola outside the USA was in Israel</string>
+    <string name="answer_4">The name of the IDF system established in Motorola is "Shoshanat Harim"</string>
+    <string name="answer_5">The first CEO of Motorola Israel was "Moshe Bassin"</string>
+    <string name="answer_6">Motorola radios were a significant player in WWI</string>
+    <string name="answer_7">In 1956, the Motorola company produced the tracking device for the first time</string>
+    <string name="answer_8">Using a Motorola receiver, Neil Armstrong broadcast his words to the whole world from the moon</string>
+    <string name="answer_9">Motorola brought the first cell phone to the world - "Celephone"</string>
+    <string name="answer_10">Paul Galvin is the founder of Motorola</string>
 
     <string-array name="options_list">
         <item>Asaf Erdman</item>

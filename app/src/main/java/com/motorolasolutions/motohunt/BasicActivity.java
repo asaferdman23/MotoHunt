@@ -54,6 +54,7 @@ public abstract class BasicActivity extends AppCompatActivity {
     private int seconds;
     private boolean running;
     private String time;
+    static boolean isFinishedTask = false;
 
     int mNextTask;
 

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="bottom"
-    tools:context=".MissionManagerClass">
+    tools:context=".MissionFourClass">
 
     <LinearLayout
+        android:id="@+id/linearLayout12"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         tools:ignore="MissingConstraints">
 
         <ScrollView
@@ -20,16 +20,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:fitsSystemWindows="true"
-                android:gravity="bottom"
+                android:layout_marginTop="70dp"
                 android:orientation="vertical"
                 tools:ignore="MissingConstraints">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fitsSystemWindows="true"
                     android:orientation="horizontal"
                     tools:ignore="MissingConstraints">
 
@@ -41,16 +38,16 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:padding="10dp"
-                        android:text="hey"
+                        android:text="@string/answer_1"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch1"
+                        android:id="@+id/switch0"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -74,12 +71,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch2"
+                        android:id="@+id/switch1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -103,12 +100,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch3"
+                        android:id="@+id/switch2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -132,12 +129,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch4"
+                        android:id="@+id/switch3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -161,12 +158,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch5"
+                        android:id="@+id/switch4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -190,12 +187,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch6"
+                        android:id="@+id/switch5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -219,12 +216,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch7"
+                        android:id="@+id/switch6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -248,12 +245,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch8"
+                        android:id="@+id/switch7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -277,12 +274,12 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch9"
+                        android:id="@+id/switch8"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -306,19 +303,34 @@
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
-                        android:id="@+id/switch10"
+                        android:id="@+id/switch9"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
                         app:switchBkgLeftColor="@color/red"
-                        app:switchBkgMiddleColor="@color/grey"
+                        app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
-                        tools:ignore="UseSwitchCompatOrMaterialXml"
+                        tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-                        />
+
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/linearLayout13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/finish_mission_four"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_shape"
+                        android:gravity="center"
+                        android:text="@string/finish_button"
+                        android:textColor="@color/white" />
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -344,17 +356,4 @@
         app:layout_constraintVertical_bias="0.066"
         tools:ignore="HardcodedText,MissingConstraints" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/finish_mission_four"
-        android:layout_width="337dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_shape"
-        android:text="@string/finish_button"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.98"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

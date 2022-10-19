@@ -8,12 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.rm.rmswitch.RMTristateSwitch;
 import com.sdsmdg.tastytoast.TastyToast;
 
 public class MissionThreeClass extends BasicActivity {
     Button mFinishBtn;
     EditText mAnswerOne, mAnswerTwo, mAnswerThree, mAnswerFour, mAnswerFive;
-    int checking =0;
+    int checking = 0;
 
     @Override
     protected void setNextTask() {
@@ -43,29 +44,29 @@ public class MissionThreeClass extends BasicActivity {
         mFinishBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                check(mAnswerOne);
-                check(mAnswerTwo);
-                check(mAnswerThree);
-                check(mAnswerFour);
-                check(mAnswerFive);
-                if (checking == 5){
+                String answer1 = mAnswerOne.getText().toString();
+                String answer2 = mAnswerTwo.getText().toString();
+                String answer3 = mAnswerThree.getText().toString();
+                String answer4 = mAnswerFour.getText().toString();
+                String answer5 = mAnswerFive.getText().toString();
+
+                String[] answers = {answer1, answer2, answer3, answer4, answer5};
+                for (int i = 1; i < answers.length; i++) {
+                    String answerId = "answer" + i;
+                    if (answers[i].isEmpty()) {
+                        Toast.makeText(MissionThreeClass.this, "You can't leave one or more fields empty ", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                }
+                if (answer1.equals(String.valueOf(R.string.answer_1_mirs)) && answer2.equals(String.valueOf(R.string.answer_2_apx_next)) &&
+                        answer3.equals(String.valueOf(R.string.answer_3_prince)) && answer4.equals(String.valueOf(R.string.answer_4_lex)) && answer5.equals(String.valueOf(R.string.answer_5_stryker))) {
                     Log.i("asaf", "onClick needs to go end activity: ");
+                    mNextTask = 0;
                     endActivity();
                 } else {
-                    TastyToast.makeText(getApplicationContext(),"One or more of the fields are empty" ,TastyToast.LENGTH_LONG, TastyToast.ERROR);
+                    TastyToast.makeText(getApplicationContext(), "Wrong answer!", TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
             }
         });
-    }
-
-    private void check(EditText editAnswer) {
-        // if the editText is not good enough,show some toast.
-        String answerWritten = editAnswer.getText().toString();
-        if (answerWritten.isEmpty()) {
-            Toast.makeText(getApplicationContext(), R.string.try_again, Toast.LENGTH_SHORT).show();
-            return;
-        } else {
-            checking++;
-        }
     }
 }

@@ -99,7 +99,7 @@ public class CameraScannerActivity extends BasicActivity {
             saveMissionNumber();
             Log.i("asaf", "taking onActivityResult from : " + selectedMission);
             switch (content) {
-                case "Welcome Home":
+                case "Hello1":
                     Intent intent = new Intent(getApplicationContext(), MissionOneClass.class);
                     startActivity(intent);
                     break;

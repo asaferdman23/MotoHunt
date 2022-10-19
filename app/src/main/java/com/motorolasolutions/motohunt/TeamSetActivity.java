@@ -93,7 +93,7 @@ public class TeamSetActivity extends BasicActivity {
             } else {
                 TastyToast.makeText(getApplicationContext(),getResources().getString(R.string.empty_field) ,TastyToast.LENGTH_LONG, TastyToast.ERROR);
             }
-
+            mTeamMemberName1.setDropDownHeight(10);
         });
     }
 

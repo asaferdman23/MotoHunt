@@ -21,17 +21,8 @@ public class MissionFourClass extends BasicActivity {
     RMTristateSwitch[] mSwitchesArray;
     ArrayList<String> mAnswerValues;
     boolean[] singleValid;
+    static boolean isRight = false;
     private String switchTextID;
-    private static final String ANSWER_ONE = String.valueOf(R.string.answer_a);
-    private static final String ANSWER_TWO = String.valueOf(R.string.answer_b);
-    private static final String ANSWER_THREE = String.valueOf(R.string.answer_c);
-    private static final String ANSWER_FOUR = String.valueOf(R.string.answer_d);
-    private static final String ANSWER_FIVE = String.valueOf(R.string.answer_e);
-    private static final String ANSWER_SIX = String.valueOf(R.string.answer_f);
-    private static final String ANSWER_SEVEN = String.valueOf(R.string.answer_g);
-    private static final String ANSWER_EIGHT = String.valueOf(R.string.answer_h);
-    private static final String ANSWER_NINE = String.valueOf(R.string.answer_i);
-    private static final String ANSWER_ten = String.valueOf(R.string.answer_j);
     private static final String TAG = "MissionFourClass";
 
     public void init() {
@@ -42,8 +33,10 @@ public class MissionFourClass extends BasicActivity {
         mFinishMissionFour = findViewById(R.id.finish_mission_four);
         mFinishMissionFour.setOnClickListener(view -> {
             checkSwitch();
+            //createDialog(true, isTouched? "Great!" : "Shit!");
         });
     }
+
     private void createDialog(boolean mState, String msg) {
         AlertDialog alertDialog = new AlertDialog.Builder(MissionFourClass.this).create();
         alertDialog.setMessage(mState ? "you right!" : msg);
@@ -63,74 +56,43 @@ public class MissionFourClass extends BasicActivity {
         setContentView(R.layout.layout_mission_four);
         init();
     }
+
     private void checkSwitch() {
-        for (int i = 1; i <OPTIONS_NUM; i++) {
-            if (i==1 || i==3 || i==4){
-                Toast.makeText(getApplicationContext(),"Youve got some wrong answer",Toast.LENGTH_SHORT).show();
-            }
-            mSwitchesArray[i].setState(RMAbstractSwitch.STATE_MIDDLE);
+        for (int i = 0; i < OPTIONS_NUM; i++) {
+            int finalI = i;
+            mSwitchesArray[i].addSwitchObserver(new RMTristateSwitch.RMTristateSwitchObserver() {
+                @Override
+                public void onCheckStateChange(RMTristateSwitch switchView, @RMTristateSwitch.State int state) {
+                    if ((finalI == 0 && state == RMTristateSwitch.STATE_LEFT) && (finalI == 1 && state == RMTristateSwitch.STATE_LEFT) && (finalI == 3 && state == RMTristateSwitch.STATE_LEFT) && (finalI == 5 && state == RMTristateSwitch.STATE_LEFT)
+                        && (finalI == 2 && state == RMTristateSwitch.STATE_RIGHT) && (finalI == 4 && state == RMTristateSwitch.STATE_RIGHT) && (finalI ==6 && state == RMTristateSwitch.STATE_RIGHT) && (finalI == 7 && state == RMTristateSwitch.STATE_RIGHT)
+                    && (finalI == 8 && state == RMTristateSwitch.STATE_RIGHT) &&(finalI == 9 && state == RMTristateSwitch.STATE_RIGHT)) {
+                        isRight = true;
+                    } else {
+                        isRight =false;
+                    }
+                }
+            });
+        }
+        if (isRight) {
+            mNextTask = 0;
+            endActivity();
+        } else {
+            createDialog(false, "Try again!");
         }
     }
 
     private void initSwitchesArray() {
-        mSwitchesArray = new RMTristateSwitch [OPTIONS_NUM];
-        for (int i = 1; i <OPTIONS_NUM; i++) {
-            switchTextID = "switch"+i;
+        mSwitchesArray = new RMTristateSwitch[OPTIONS_NUM];
+        for (int i = 0; i < OPTIONS_NUM; i++) {
+            switchTextID = "switch" + i;
             mSwitchesArray[i] = findViewById(getResources().getIdentifier(switchTextID, "id", getPackageName()));
-            mSwitchesArray[i].setSwitchDesign(RMTristateSwitch.DESIGN_LARGE);
+            mSwitchesArray[i].setSwitchDesign(RMTristateSwitch.DESIGN_ANDROID);
+            mSwitchesArray[i].setState(RMAbstractSwitch.STATE_MIDDLE);
         }
     }
-//
-//    void checkAll(){
-//        for (int i = 1; i <= OPTIONS_NUM; i++) {
-//            if (mSwitchesArray[i]=){
-//                return;
-//            }
-//        }
-//    }
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
-    }
-    boolean doChecks(int index) {
-//        int numToCheck = mAnswerValues[index];
-//        if (numToCheck > Defs.MAX_BRIGHTNESS_VALUE || numToCheck < Defs.MIN_BRIGHTNESS_VALUE) {
-//            return false;
-//       }
-//        for (int i = 0; i < index; i++) {
-//            if (numToCheck < mAnswerValues[i]) {
-//                return false;
-//            }
-//        }
-        return true;
-    }
-    private class myTextWatcher implements TextWatcher {
-        int index;
-        public myTextWatcher(int index) {
-            this.index = index;
-        }
-
-        @Override
-        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-        }
-
-        @Override
-        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-        }
-
-        @Override
-        public void afterTextChanged(Editable editable) {
-            boolean checked = false;
-            if (editable.length() > 0){
-                //int newVal = Integer.parseInt(editable.toString());
-                String guestAnswer = editable.toString();
-                mAnswerValues.add(guestAnswer);
-                //checked = doChecks(index);
-                //checkAll();
-                Log.i("asaf", "afterTextChanged: " +mAnswerValues);
-            }
-            //changePic(checked, index);
-        }
     }
 }
