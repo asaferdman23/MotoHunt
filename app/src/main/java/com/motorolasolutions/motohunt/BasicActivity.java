@@ -167,7 +167,7 @@ public abstract class BasicActivity extends AppCompatActivity {
                     break;
             }
         };
-        mHandler.postDelayed(mNextTaskRunnable, 2000);
+        mHandler.postDelayed(mNextTaskRunnable, 3000);
     }
 
     private void audioPlayer() {

@@ -31,6 +31,7 @@
         <activity
             android:name=".RiddleTwo"
             android:exported="true" >
+
         </activity>
         <activity
             android:name=".RiddleSix"
@@ -40,6 +41,7 @@
         <activity
             android:name=".RiddleSeven"
             android:exported="true" >
+
         </activity>
         <activity
             android:name=".RiddleEight"
@@ -60,29 +62,37 @@
         <activity
             android:name=".GuessWhoActivity"
             android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+
         </activity>
         <activity
             android:name=".MissionOneClass"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".MissionTwoClass"
-            android:exported="true" />
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".MissionThreeClass"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MissionFourClass"
             android:exported="true" />
         <activity
             android:name=".MissionSixClass"
-            android:exported="true" />
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".MissionSevenClass"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".MissionEightClass"
             android:exported="true" />

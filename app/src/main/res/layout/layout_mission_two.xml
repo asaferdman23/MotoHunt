@@ -13,15 +13,15 @@
 
     <com.jsibbold.zoomage.ZoomageView
         android:id="@+id/myZoomageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
         android:src="@drawable/hapoel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.396"
+        app:layout_constraintVertical_bias="0.31"
         tools:ignore="MissingClass,MissingConstraints"
         app:zoomage_restrictBounds="false"
         app:zoomage_animateOnReset="true"
@@ -58,14 +58,14 @@
         android:layout_height="wrap_content"
         android:text="@string/mission_2"
         android:textColor="@color/motoBlue"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintVertical_bias="0.075"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton

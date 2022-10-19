@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.jsibbold.zoomage.ZoomageView;
 import com.sdsmdg.tastytoast.TastyToast;
@@ -42,6 +43,8 @@ public class RiddleEight extends BasicActivity {
 
         answer = findViewById(R.id.mission_two_input);
         answer.setInputType(InputType.TYPE_CLASS_TEXT);
+        TextView title = findViewById(R.id.mission_welcome_text);
+        title.setText("Open the lock!");
         mFinishButton = findViewById(R.id.finish_mission_two_button);
         img = findViewById(R.id.myZoomageView);
         img.setImageResource(R.drawable.riddle_8);

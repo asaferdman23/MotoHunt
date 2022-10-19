@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MissionManagerClass">
+    tools:context=".MissionSixClass">
 
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
+        android:focusedByDefault="true" />
     <include
         android:id="@+id/include2"
         layout="@layout/title_bar"
@@ -21,12 +26,46 @@
         android:layout_height="wrap_content"
         android:text="@string/mission_6"
         android:textColor="@color/motoBlue"
-        android:textSize="30dp"
+        android:textSize="26dp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.214"
         tools:ignore="HardcodedText,MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/mission6_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Draw the symbol of Motorola solutions from nearby objects or your own objects. \nTake a picture of team members with the symbol \nSend the picture to Dor Perets \n0509628408"
+        android:textColor="@color/motoBlue"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/finish_mission_six_button"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:padding="10dp"
+        android:text="@string/finish_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/include2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

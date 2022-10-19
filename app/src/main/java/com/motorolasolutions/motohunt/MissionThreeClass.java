@@ -54,12 +54,13 @@ public class MissionThreeClass extends BasicActivity {
                 for (int i = 1; i < answers.length; i++) {
                     String answerId = "answer" + i;
                     if (answers[i].isEmpty()) {
-                        Toast.makeText(MissionThreeClass.this, "You can't leave one or more fields empty ", Toast.LENGTH_SHORT).show();
+                        TastyToast.makeText(getApplicationContext(),"You can't leave one or more fields empty " ,TastyToast.LENGTH_LONG, TastyToast.ERROR);
                         return;
                     }
                 }
-                if (answer1.equals(String.valueOf(R.string.answer_1_mirs)) && answer2.equals(String.valueOf(R.string.answer_2_apx_next)) &&
-                        answer3.equals(String.valueOf(R.string.answer_3_prince)) && answer4.equals(String.valueOf(R.string.answer_4_lex)) && answer5.equals(String.valueOf(R.string.answer_5_stryker))) {
+                if (answer1.equalsIgnoreCase(getResources().getString(R.string.answer_1_mirs)) && answer2.equalsIgnoreCase(getResources().getString(R.string.answer_2_apx_next)) &&
+                        answer3.equalsIgnoreCase(getResources().getString(R.string.answer_3_prince)) && answer4.equalsIgnoreCase(getResources().getString(R.string.answer_4_lex)) &&
+                        answer5.equalsIgnoreCase(getResources().getString(R.string.answer_5_stryker))) {
                     Log.i("asaf", "onClick needs to go end activity: ");
                     mNextTask = 0;
                     endActivity();

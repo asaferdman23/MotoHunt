@@ -1,5 +1,6 @@
 package com.motorolasolutions.motohunt;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
@@ -7,6 +8,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.jsibbold.zoomage.ZoomageView;
 import com.sdsmdg.tastytoast.TastyToast;
@@ -16,6 +18,7 @@ public class RiddleSeven extends BasicActivity {
     EditText answer;
     String theSolution = "frontcloset";
     ZoomageView img;
+    TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,7 @@ public class RiddleSeven extends BasicActivity {
 
     @Override
     protected void setNextTask() {
-        mNextTask = 2;
+        mNextTask = 999;
     }
 
     @Override
@@ -34,11 +37,15 @@ public class RiddleSeven extends BasicActivity {
         super.onPointerCaptureChanged(hasCapture);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void init() {
         super.init();
 
         answer = findViewById(R.id.mission_two_input);
+        title = findViewById(R.id.mission_welcome_text);
+        title.setText("2 Words answer - Write without space");
+        title.setTextSize(19);
         answer.setInputType(InputType.TYPE_CLASS_TEXT);
         mFinishButton = findViewById(R.id.finish_mission_two_button);
         img = findViewById(R.id.myZoomageView);

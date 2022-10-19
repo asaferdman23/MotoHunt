@@ -22,8 +22,8 @@
     <string name="mission_1_address">1.Address</string>
     <string name="mission_1_duration">2.Duration of work at Motorola</string>
     <string name="mission_1_children">3.Number of children</string>
-    <string name="mission_1_challenge">For each category, you must take a photo in ascending order and send the photos to Dor Perets</string>
-    <string name="photo_mission_1_challenge">Take the photos with the paper that you wrote the data on</string>
+    <string name="mission_1_challenge">For each category, you must take a photo in ascending order and send the photos to Dor Perets\n050-9628408</string>
+    <string name="photo_mission_1_challenge">Take the photos with the paper that you wrote the info on</string>
     <string name="mission_three_content">You must arrange the answers in the order that the device was released to the industry</string>
     <string name="mission_1">Here Is Your First Mission!</string>
     <string name="mission_2">Here Is Your Second Mission!</string>

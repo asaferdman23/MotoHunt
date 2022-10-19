@@ -6,6 +6,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.jsibbold.zoomage.ZoomageView;
 import com.sdsmdg.tastytoast.TastyToast;
@@ -39,6 +40,8 @@ public class RiddleSix extends BasicActivity {
 
         answer = findViewById(R.id.mission_two_input);
         mFinishButton = findViewById(R.id.finish_mission_two_button);
+        TextView title = findViewById(R.id.mission_welcome_text);
+        title.setText("5 Digits answer");
         img = findViewById(R.id.myZoomageView);
         img.setImageResource(R.drawable.riddle_6);
         mFinishButton.setOnClickListener(new View.OnClickListener() {

@@ -8,9 +8,13 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jsibbold.zoomage.ZoomageView;
 import com.sdsmdg.tastytoast.TastyToast;
+
+import org.w3c.dom.Text;
 
 import javax.security.auth.login.LoginException;
 
@@ -24,6 +28,7 @@ public class MissionTwoClass extends BasicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_mission_two);
+
         init();
     }
 
@@ -40,7 +45,10 @@ public class MissionTwoClass extends BasicActivity {
     @Override
     public void init() {
         super.init();
-
+        ZoomageView zv = findViewById(R.id.myZoomageView);
+        zv.setVisibility(View.INVISIBLE);
+        TextView tv = findViewById(R.id.mission_welcome_text);
+        tv.setText("You have a puzzle.. figure it out.");
         missionTwoInput = findViewById(R.id.mission_two_input);
         mFinishButton = findViewById(R.id.finish_mission_two_button);
         mFinishButton.setOnClickListener(new View.OnClickListener() {
