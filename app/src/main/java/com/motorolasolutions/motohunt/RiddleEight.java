@@ -1,24 +1,23 @@
 package com.motorolasolutions.motohunt;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import com.jsibbold.zoomage.ZoomageView;
 import com.sdsmdg.tastytoast.TastyToast;
 
-import javax.security.auth.login.LoginException;
+import java.lang.reflect.Type;
 
-public class MissionTwoClass extends BasicActivity {
+public class RiddleEight extends BasicActivity {
     Button mFinishButton;
-    EditText missionTwoInput;
-    String theSolution = "1997";
-
+    EditText answer;
+    String theSolution = "032";
+    ZoomageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +40,16 @@ public class MissionTwoClass extends BasicActivity {
     public void init() {
         super.init();
 
-        missionTwoInput = findViewById(R.id.mission_two_input);
+        answer = findViewById(R.id.mission_two_input);
+        answer.setInputType(InputType.TYPE_CLASS_TEXT);
         mFinishButton = findViewById(R.id.finish_mission_two_button);
+        img = findViewById(R.id.myZoomageView);
+        img.setImageResource(R.drawable.riddle_8);
         mFinishButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String solutionGuess = missionTwoInput.getText().toString();
+                String solutionGuess = answer.getText().toString();
                 if (solutionGuess.equals(theSolution)) {
-
                     endActivity();
                 } else {
                     TastyToast.makeText(getApplicationContext(), "Wrong , Try again! ", TastyToast.LENGTH_LONG, TastyToast.ERROR);

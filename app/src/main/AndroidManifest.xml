@@ -30,6 +30,27 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".RiddleOne"
+            android:exported="false" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".RiddleTwo"
+            android:exported="false" />
+        <activity
+            android:name=".RiddleSix"
+            android:exported="false" />
+        <activity
+            android:name=".RiddleSeven"
+            android:exported="false" />
+        <activity
+            android:name=".RiddleEight"
+            android:exported="false" />
+        <activity
             android:name=".CameraScannerActivity"
             android:exported="false" />
         <activity

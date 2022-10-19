@@ -11,7 +11,8 @@
         layout="@layout/toolbar" />
 
 
-    <ImageView
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/myZoomageView"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:src="@drawable/hapoel"
@@ -21,7 +22,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.396"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingClass,MissingConstraints"
+        app:zoomage_restrictBounds="false"
+        app:zoomage_animateOnReset="true"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_autoCenter="true"
+        app:zoomage_zoomable="true"
+        app:zoomage_translatable="true"
+        app:zoomage_minScale="0.6"
+        app:zoomage_maxScale="8"
+        />
 
     <EditText
         android:id="@+id/mission_two_input"
