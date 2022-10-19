@@ -120,26 +120,26 @@
     </string-array>
 
 
-    <string-array name="answer_list_guess_who">
+    <string-array name="questions_list_guess_who">
         <item>Lives in Dafna</item>
         <item>Allergic to peanuts</item>
         <item>Movie director &amp; producer</item>
-        <item>Father of Israeli Judo's champion (youth)</item>
+        <item>Father of Israeli Judo\'s champion (youth)</item>
         <item>Met his wife at Motorola</item>
         <item>Lived in USA for 5 years</item>
         <item>Crossfit trainer</item>
         <item>Performed (amazingly) with Eli &amp; Mariano on stage</item>
         <item>Married to kindergarten teacher and acts like a child</item>
         <item>Speaks German fluently</item>
-        <item>Starring in Motorola's basketball team</item>
+        <item>Starring in Motorola\'s basketball team</item>
         <item>Got engaged 2 weeks ago! (Congratulations!)</item>
-        <item>Wedding postponed twice due to Covid-19 </item>
+        <item>Wedding postponed <b><i>twice</i></b> due to Covid-19</item>
         <item>Living in Zichron Yaakov, together with bark of pine trees</item>
         <item>placeholder_answer_15</item>
         <item>placeholder_answer_16</item>
     </string-array>
 
-    <string-array name="questions_list_guess_who">
+    <string-array name="answer_list_guess_who">
         <item>Eilon Eyal</item>
         <item>Liron Meshulami</item>
         <item>David Ben-Ari</item>

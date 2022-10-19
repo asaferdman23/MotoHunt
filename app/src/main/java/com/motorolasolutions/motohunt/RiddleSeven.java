@@ -1,6 +1,7 @@
 package com.motorolasolutions.motohunt;
 
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -38,6 +39,7 @@ public class RiddleSeven extends BasicActivity {
         super.init();
 
         answer = findViewById(R.id.mission_two_input);
+        answer.setInputType(InputType.TYPE_CLASS_TEXT);
         mFinishButton = findViewById(R.id.finish_mission_two_button);
         img = findViewById(R.id.myZoomageView);
         img.setImageResource(R.drawable.riddle_7);

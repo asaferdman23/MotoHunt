@@ -23,33 +23,28 @@
         <activity
             android:name=".PathChooserActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".RiddleOne"
-            android:exported="false" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:exported="true" >
         </activity>
         <activity
             android:name=".RiddleTwo"
-            android:exported="false" />
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".RiddleSix"
-            android:exported="false" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".RiddleSeven"
-            android:exported="false" />
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".RiddleEight"
-            android:exported="false" />
+            android:exported="true" >
+        </activity>
         <activity
             android:name=".CameraScannerActivity"
             android:exported="false" />
@@ -64,7 +59,12 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".GuessWhoActivity"
-            android:exported="true" />
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MissionOneClass"
             android:exported="true" />
