@@ -10,7 +10,7 @@
         android:id="@+id/include_app_bar"
         layout="@layout/toolbar" />
 
-    <LinearLayout
+    <ScrollView
         android:id="@+id/linearLayout11"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -154,7 +154,7 @@
                     tools:ignore="Autofill" />
             </LinearLayout>
         </ScrollView>
-    </LinearLayout>
+    </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/set_your_team_button"

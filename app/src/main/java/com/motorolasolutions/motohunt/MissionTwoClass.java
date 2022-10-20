@@ -58,8 +58,12 @@ public class MissionTwoClass extends BasicActivity {
             public void onClick(View view) {
                 String solutionGuess = missionTwoInput.getText().toString();
                 if (solutionGuess.equals(theSolution)) {
-                    Intent intent = new Intent(getApplicationContext(),RiddleTwo.class);
-                 startActivity(intent);
+                    final Runnable mNextTaskRunnable = () -> {
+                        Intent intent = new Intent(getApplicationContext(),RiddleTwo.class);
+                        startActivity(intent);
+                    };
+                    mHandler.postDelayed(mNextTaskRunnable, 2500);
+                    TastyToast.makeText(getApplicationContext(),"Good Job! now Riddle!", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
                 } else {
                     isFinishedTask = false;
                     saveFinishedTask();

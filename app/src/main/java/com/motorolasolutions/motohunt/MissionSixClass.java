@@ -68,9 +68,12 @@ public class MissionSixClass extends BasicActivity{
             public void onClick(DialogInterface dialogInterface, int i) {
                 String answer = editTextAns.getText().toString();
                 if (answer.equals("628")){
-                    Intent intent = new Intent(getApplicationContext(),RiddleSeven.class);
-                    startActivity(intent);
-
+                    final Runnable mNextTaskRunnable = () -> {
+                        Intent intent = new Intent(getApplicationContext(),RiddleSeven.class);
+                        startActivity(intent);
+                    };
+                    mHandler.postDelayed(mNextTaskRunnable, 2500);
+                    TastyToast.makeText(getApplicationContext(),"Good Job! now Riddle!", TastyToast.LENGTH_LONG, TastyToast.SUCCESS);
                 } else {
                     isFinishedTask = false;
                     saveFinishedTask();

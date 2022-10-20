@@ -1,11 +1,16 @@
 package com.motorolasolutions.motohunt;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -45,10 +50,10 @@ public class TeamSetActivity extends BasicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_team);
-        Log.i("Asaf", "enters here again: ");
         init();
     }
 
+    @SuppressLint("WrongViewCast")
     @Override
     public void init() {
         super.init();
@@ -159,4 +164,6 @@ public class TeamSetActivity extends BasicActivity {
             }
         }
     }
+
+
 }
