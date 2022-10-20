@@ -54,7 +54,7 @@ public class MissionThreeClass extends BasicActivity {
                 for (int i = 1; i < answers.length; i++) {
                     String answerId = "answer" + i;
                     if (answers[i].isEmpty()) {
-                        TastyToast.makeText(getApplicationContext(),"You can't leave one or more fields empty " ,TastyToast.LENGTH_LONG, TastyToast.ERROR);
+                        TastyToast.makeText(getApplicationContext(),"You can't leave empty field" ,TastyToast.LENGTH_LONG, TastyToast.WARNING);
                         return;
                     }
                 }
@@ -67,7 +67,7 @@ public class MissionThreeClass extends BasicActivity {
                     endActivity();
                 } else {
                     isFinishedTask = false;
-                    TastyToast.makeText(getApplicationContext(), "Wrong answer!", TastyToast.LENGTH_LONG, TastyToast.ERROR);
+                    TastyToast.makeText(getApplicationContext(), "Wrong answer / wrong order!", TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
             }
         });

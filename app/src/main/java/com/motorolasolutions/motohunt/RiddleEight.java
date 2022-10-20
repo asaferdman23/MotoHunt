@@ -29,7 +29,7 @@ public class RiddleEight extends BasicActivity {
 
     @Override
     protected void setNextTask() {
-        mNextTask = 2;
+        mNextTask = 999;
     }
 
     @Override

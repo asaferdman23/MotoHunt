@@ -37,7 +37,8 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
+                        android:textSize="20dp"
                         android:text="@string/answer_1"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
@@ -46,6 +47,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:state="middle"
+                        android:layout_gravity="center"
                         app:switchBkgLeftColor="@color/red"
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
@@ -66,8 +68,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_2"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -79,6 +82,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -95,8 +99,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_3"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -108,6 +113,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -124,8 +130,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_4"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -137,6 +144,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -153,8 +161,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_5"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -166,6 +175,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -182,8 +192,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_6"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -195,6 +206,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -211,8 +223,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_7"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -224,6 +237,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -240,8 +254,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_8"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -253,6 +268,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -269,8 +285,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_9"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -282,6 +299,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                        android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
                 </LinearLayout>
 
@@ -298,8 +316,9 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
-                        android:padding="10dp"
+                        android:padding="1dp"
                         android:text="@string/answer_10"
+                        android:textSize="20dp"
                         tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <com.rm.rmswitch.RMTristateSwitch
@@ -311,6 +330,7 @@
                         app:switchBkgMiddleColor="@color/black_25_transparent"
                         app:switchBkgRightColor="@color/green"
                         app:switchDesign="large"
+                    android:layout_gravity="center"
                         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
 

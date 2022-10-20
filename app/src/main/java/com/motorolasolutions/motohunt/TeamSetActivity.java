@@ -14,8 +14,10 @@ import android.widget.Toast;
 
 import com.sdsmdg.tastytoast.TastyToast;
 
+import java.time.Clock;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -77,7 +79,8 @@ public class TeamSetActivity extends BasicActivity {
         button.setOnClickListener(view -> {
             mTeamName = mTeam.getText().toString();
             if (mTeamName.isEmpty()) {
-                Toast.makeText(getApplicationContext(), "You can't leave an empty field", Toast.LENGTH_SHORT).show();
+                TastyToast.makeText(getApplicationContext(), "Please choose your team name!",
+                        TastyToast.LENGTH_LONG, TastyToast.INFO).show();
                 return;
             }
             mTeamMembersCount = 0;
@@ -130,6 +133,8 @@ public class TeamSetActivity extends BasicActivity {
         edit.putString(TEAM_NAME, mTeamName);
         edit.putInt(TEAM_COUNT, mTeamMembersCount);
         edit.putStringSet(MEMBERS, mMembers);
+        //setTimerHere
+        //Date currentTime =
         edit.apply();
     }
 

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.rm.rmswitch.RMAbstractSwitch;
 import com.rm.rmswitch.RMTristateSwitch;
+import com.sdsmdg.tastytoast.TastyToast;
 
 import java.util.ArrayList;
 
@@ -22,27 +23,37 @@ public class MissionFourClass extends BasicActivity {
     EditText[] mEditTextsArray;
     RMTristateSwitch[] mSwitchesArray;
     ArrayList<String> mAnswerValues;
-    boolean[] singleValid;
-    boolean isRight = false;
+    boolean valid;
+    int[] answers;
+    int[] requested;
+    boolean fullyFilled = true;
     private String switchTextID;
     private static final String TAG = "MissionFourClass";
 
     public void init() {
         super.init();
         mAnswerValues = new ArrayList<>();
-        singleValid = new boolean[OPTIONS_NUM];
+        answers = new int[OPTIONS_NUM];
+        requested = new int[]{-1, -1, 1, -1, 1, -1, 1, 1, 1, 1};
         initSwitchesArray();
         mFinishMissionFour = findViewById(R.id.finish_mission_four);
         //checkSwitch();
 
         mFinishMissionFour.setOnClickListener(view -> {
             //createDialog(true, isTouched? "Great!" : "Shit!");
-            Log.i("asaf", "the boolean isRight = dffdfdfdf" +isRight);
-            if (isRight) {
+            checkSwitch();
+            if (valid) {
                 mNextTask = 0;
                 endActivity();
             } else {
-                createDialog(false, "Try again!");
+                if (!fullyFilled){
+                    TastyToast.makeText(this, "Missing answers! forgot to scroll ? ",
+                            TastyToast.LENGTH_LONG, TastyToast.WARNING);
+                }
+                else{
+                    TastyToast.makeText(this, "One of the answers are wrong!",
+                            TastyToast.LENGTH_LONG, TastyToast.ERROR);
+                }
             }
         });
     }
@@ -74,23 +85,33 @@ public class MissionFourClass extends BasicActivity {
             mSwitchesArray[i] = findViewById(getResources().getIdentifier(switchTextID, "id", getPackageName()));
             mSwitchesArray[i].setSwitchDesign(RMTristateSwitch.DESIGN_ANDROID);
             mSwitchesArray[i].setState(RMAbstractSwitch.STATE_MIDDLE);
+            int finalI = i;
+            mSwitchesArray[i].addSwitchObserver(new RMTristateSwitch.RMTristateSwitchObserver() {
+                @Override
+                public void onCheckStateChange(RMTristateSwitch switchView, @RMTristateSwitch.State int state) {
+                    int id = finalI;
+                    if (mSwitchesArray[id].getState() == RMTristateSwitch.STATE_LEFT){
+                        answers[id] = -1;
+                    } else if (mSwitchesArray[id].getState() == RMTristateSwitch.STATE_RIGHT){
+                        answers[id] = 1;
+                    } else{
+                        answers[id] = 0;
+                    }
+                }
+            });
         }
     }
 
-//    private void checkSwitch() {
-//        for (int i = 0; i < OPTIONS_NUM; i++) {
-//            int finalI = i;
-//            mSwitchesArray[i].addSwitchObserver(new RMTristateSwitch.RMTristateSwitchObserver() {
-//                @Override
-//                public void onCheckStateChange(RMTristateSwitch switchView, @RMTristateSwitch.State int state) {
-//                    int id = finalI;
-//                    if (mSwitchesArray[id].getState(RMAbstractSwitch.STATE_lef)){
-//                        Log.i("asaf", "onCheckStateChange: finalI =" + id);
-//                    }
-//                }
-//            });
-//        }
-//    }
+    private void checkSwitch() {
+        valid = true;
+        fullyFilled = true;
+        for (int i = 0; i < OPTIONS_NUM; i++) {
+            valid = valid & (answers[i] == requested[i]);
+            if (answers[i] == 0){
+                fullyFilled = false;
+            }
+        }
+    }
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {

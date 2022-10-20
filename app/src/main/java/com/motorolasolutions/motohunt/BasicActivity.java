@@ -163,6 +163,9 @@ public abstract class BasicActivity extends AppCompatActivity {
                 case 9:             // next activity
                     // send intent to next activity
                     break;
+                case 999:
+                    //send to finish page
+                    //end timer
                 default:
                     break;
             }
