@@ -23,7 +23,10 @@
         <activity
             android:name=".PathChooserActivity"
             android:exported="true">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".RiddleOne"
@@ -82,10 +85,6 @@
         <activity
             android:name=".MissionFourClass"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MissionSixClass"
@@ -99,6 +98,9 @@
         <activity
             android:name=".MissionEightClass"
             android:exported="true" />
+        <activity android:name=".EndGame"
+            android:exported="true" >
+        </activity>
     </application>
 
 </manifest>

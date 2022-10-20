@@ -26,6 +26,7 @@ public class TeamSetActivity extends BasicActivity {
     private static final String MEMBERS = "TEAM_MEMBERS";
     private static final String TEAM_NAME = "TEAM";
     private static final String TEAM_COUNT = "TEAM_COUNT";
+    private static final String START_TIME = "START_TIME";
     AutoCompleteTextView mTeamMemberName1, mTeamMemberName2, mTeamMemberName3, mTeamMemberName4, mTeamMemberName5, mTeamMemberName6;
     EditText mTeam;
     int mTeamMembersCount;
@@ -134,6 +135,8 @@ public class TeamSetActivity extends BasicActivity {
         edit.putInt(TEAM_COUNT, mTeamMembersCount);
         edit.putStringSet(MEMBERS, mMembers);
         //setTimerHere
+        long startTime = System.currentTimeMillis();
+        edit.putLong(START_TIME, startTime);
         //Date currentTime =
         edit.apply();
     }

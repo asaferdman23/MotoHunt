@@ -164,6 +164,8 @@ public abstract class BasicActivity extends AppCompatActivity {
                     // send intent to next activity
                     break;
                 case 999:
+                    Intent endIntent = new Intent(getApplicationContext(), EndGame.class);
+                    startActivity(endIntent);// next activity
                     //send to finish page
                     //end timer
                 default:

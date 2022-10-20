@@ -21,7 +21,7 @@ import javax.security.auth.login.LoginException;
 public class MissionTwoClass extends BasicActivity {
     Button mFinishButton;
     EditText missionTwoInput;
-    String theSolution = "1997";
+    String theSolution = "234811111315";
 
 
     @Override
@@ -48,7 +48,8 @@ public class MissionTwoClass extends BasicActivity {
         ZoomageView zv = findViewById(R.id.myZoomageView);
         zv.setVisibility(View.INVISIBLE);
         TextView tv = findViewById(R.id.mission_welcome_text);
-        tv.setText("You have a puzzle.. figure it out.");
+        tv.setTextSize(20);
+        tv.setText("Answer is 12 digits total \nEnter the answer without spaces");
         missionTwoInput = findViewById(R.id.mission_two_input);
         mFinishButton = findViewById(R.id.finish_mission_two_button);
         mFinishButton.setOnClickListener(new View.OnClickListener() {
