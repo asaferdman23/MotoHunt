@@ -39,7 +39,7 @@ public class CameraScannerActivity extends BasicActivity {
         setContentView(R.layout.activity_camera);
         welcomeText = findViewById(R.id.welcome_text);
         mOpenCameraButton = findViewById(R.id.open_camera_button);
-        mHintImage=findViewById(R.id.hint_picture);
+        mHintImage = findViewById(R.id.hint_picture);
         mOpenCameraButton.setOnClickListener(v -> {
             IntentIntegrator intentIntegrator = new IntentIntegrator(this);
             //Set flash option
@@ -58,12 +58,14 @@ public class CameraScannerActivity extends BasicActivity {
         edit.putString(MISSION_NUMBER, selectedMission);
         edit.apply();
     }
+
     private void getOption() {
 //        mSharedPreferences = getSharedPreferences("OPTION", Context.MODE_PRIVATE);
         mSharedPreferences = getSharedPreferences(OPTION, Context.MODE_PRIVATE);
         mPathSelected = mSharedPreferences.getString(OPTIONS, spinnerSharedPref);
-        Log.i("asaf", "getOption: is " +mPathSelected);
+        Log.i("asaf", "getOption: is " + mPathSelected);
     }
+
     public void hintsPicker() {
         getOption();
         Intent mNextMissionIntent = getIntent();
@@ -92,6 +94,9 @@ public class CameraScannerActivity extends BasicActivity {
                     mHintImage.setImageResource(R.drawable.hint_7);
                     break;
                 case "class com.motorolasolutions.motohunt.MissionSevenClass":
+                    mHintImage.setImageResource(R.drawable.hint_8);
+                    break;
+                case "class com.motorolasolutions.motohunt.MissionEightClass":
                     mHintImage.setImageResource(R.drawable.hint_8);
                     break;
             }
@@ -173,8 +178,8 @@ public class CameraScannerActivity extends BasicActivity {
                     startActivity(intent8);
                     break;
             }
-        } else if (!isFinishedTask){
-            TastyToast.makeText(CameraScannerActivity.this, "You can't move to another mission! ", TastyToast.LENGTH_LONG,TastyToast.ERROR).show();
+        } else if (!isFinishedTask) {
+            TastyToast.makeText(CameraScannerActivity.this, "You can't move to another mission! ", TastyToast.LENGTH_LONG, TastyToast.ERROR).show();
         }
     }
 
