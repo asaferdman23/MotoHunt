@@ -44,11 +44,13 @@ public class MissionFourClass extends BasicActivity {
             checkSwitch();
             if (valid) {
                 isFinishedTask = true;
+                saveFinishedTask();
                 mNextTask = 0;
                 endActivity();
             } else {
                 if (!fullyFilled) {
                     isFinishedTask = false;
+                    saveFinishedTask();
                     TastyToast.makeText(this, "Missing answers! forgot to scroll ? ",
                             TastyToast.LENGTH_LONG, TastyToast.WARNING);
                 } else {

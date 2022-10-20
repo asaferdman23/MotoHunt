@@ -79,11 +79,13 @@ public class MissionEightClass extends BasicActivity {
                         return;
                     } else if (goodAnswer) {
                         isFinishedTask = true;
+                        saveFinishedTask();
                         Log.i("asaf", "onClick: goodAnswer =  " + goodAnswer);
                         mNextTask = 0;
                         endActivity();
                     } else {
                         isFinishedTask = false;
+                        saveFinishedTask();
                         TastyToast.makeText(MissionEightClass.this, "Wrong answer",
                                 TastyToast.LENGTH_SHORT, TastyToast.ERROR);
                     }

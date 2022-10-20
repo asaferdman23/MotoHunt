@@ -92,19 +92,20 @@ public class TeamSetActivity extends BasicActivity {
             check(mTeamMemberName5);
             check(mTeamMemberName6);
             if (mTeamMembersCount >= 4) {
+                isFinishedTask = true;
+                saveFinishedTask();
                 saveTeam();
                 endActivity();
             } else {
-                TastyToast.makeText(getApplicationContext(),getResources().getString(R.string.empty_field) ,TastyToast.LENGTH_LONG, TastyToast.ERROR);
+                isFinishedTask = false;
+                TastyToast.makeText(getApplicationContext(), getResources().getString(R.string.empty_field), TastyToast.LENGTH_LONG, TastyToast.ERROR);
             }
-            mTeamMemberName1.setDropDownHeight(10);
         });
     }
 
     private void check(AutoCompleteTextView editName) {
         // if the editText is not good enough,show some toast.
         String nameWritten = editName.getText().toString();
-
         if (nameWritten.isEmpty()) {
             Log.i("Asaf", "check stuck here : ");
             return;

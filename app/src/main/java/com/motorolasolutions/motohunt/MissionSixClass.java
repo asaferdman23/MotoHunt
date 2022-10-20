@@ -68,10 +68,12 @@ public class MissionSixClass extends BasicActivity{
                 String answer = editTextAns.getText().toString();
                 if (answer.equals("628")){
                     isFinishedTask = true;
+                    saveFinishedTask();
                     mNextTask = 0;
                     endActivity();
                 } else {
                     isFinishedTask = false;
+                    saveFinishedTask();
                     TastyToast.makeText(MissionSixClass.this, getResources().getString(R.string.try_again), TastyToast.LENGTH_LONG,TastyToast.ERROR).show();
                     return;
                 }

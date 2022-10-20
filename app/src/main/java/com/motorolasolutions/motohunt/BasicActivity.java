@@ -1,6 +1,8 @@
 package com.motorolasolutions.motohunt;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -48,6 +50,7 @@ import nl.dionsegijn.konfetti.models.Size;
  */
 public abstract class BasicActivity extends AppCompatActivity {
     private static final String TAG = BasicActivity.class.getName();
+    private static final String BOOLEAN_IS_FINISHED = "FINITO_BOOLEAN";
     KonfettiView konfettiView;
     Handler mHandler;
     TextView mTimer;
@@ -90,14 +93,12 @@ public abstract class BasicActivity extends AppCompatActivity {
     }
 
 //
-//    private void saveTime() {
-//        SharedPreferences timePreferences; = getSharedPreferences("TIME", Context.MODE_PRIVATE);
-//        SharedPreferences.Editor edit = mSharedPreferences.edit();
-//        edit.putString(TEAM_NAME, team.getText().toString());
-//        edit.putInt(TEAM_COUNT, teamMembersCount);
-//        edit.putStringSet(MEMBERS, mMembers);
-//        edit.apply();
-//    }
+    public void saveFinishedTask() {
+        SharedPreferences finishedTaskPref = getSharedPreferences("finished", Context.MODE_PRIVATE);
+        SharedPreferences.Editor edit = finishedTaskPref.edit();
+        edit.putBoolean(BOOLEAN_IS_FINISHED,isFinishedTask);
+        edit.apply();
+    }
 
     protected void endActivity() {
         // this should be at the end of any activity, after finishing the mission

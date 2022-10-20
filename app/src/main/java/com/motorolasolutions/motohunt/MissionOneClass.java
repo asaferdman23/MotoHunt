@@ -58,10 +58,12 @@ public class MissionOneClass extends BasicActivity {
                 String answer = editTextAns.getText().toString();
                 if (answer.equals("194")) {
                     isFinishedTask = true;
+                    saveFinishedTask();
                     mNextTask = 0;
                     endActivity();
                 } else {
-                    isFinishedTask =false;
+                    isFinishedTask = false;
+                    saveFinishedTask();
                     TastyToast.makeText(MissionOneClass.this, getResources().getString(R.string.try_again), TastyToast.LENGTH_LONG, TastyToast.ERROR).show();
                     return;
                 }

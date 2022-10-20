@@ -63,10 +63,12 @@ public class MissionThreeClass extends BasicActivity {
                         answer5.equalsIgnoreCase(getResources().getString(R.string.answer_5_stryker))) {
                     Log.i("asaf", "onClick needs to go end activity: ");
                     isFinishedTask = true;
+                    saveFinishedTask();
                     mNextTask = 0;
                     endActivity();
                 } else {
                     isFinishedTask = false;
+                    saveFinishedTask();
                     TastyToast.makeText(getApplicationContext(), "Wrong answer / wrong order!", TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
             }
