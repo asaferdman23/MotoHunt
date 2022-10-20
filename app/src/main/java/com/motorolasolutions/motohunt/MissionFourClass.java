@@ -43,14 +43,16 @@ public class MissionFourClass extends BasicActivity {
             //createDialog(true, isTouched? "Great!" : "Shit!");
             checkSwitch();
             if (valid) {
+                isFinishedTask = true;
                 mNextTask = 0;
                 endActivity();
             } else {
-                if (!fullyFilled){
+                if (!fullyFilled) {
+                    isFinishedTask = false;
                     TastyToast.makeText(this, "Missing answers! forgot to scroll ? ",
                             TastyToast.LENGTH_LONG, TastyToast.WARNING);
-                }
-                else{
+                } else {
+                    isFinishedTask = false;
                     TastyToast.makeText(this, "One of the answers are wrong!",
                             TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
@@ -90,11 +92,11 @@ public class MissionFourClass extends BasicActivity {
                 @Override
                 public void onCheckStateChange(RMTristateSwitch switchView, @RMTristateSwitch.State int state) {
                     int id = finalI;
-                    if (mSwitchesArray[id].getState() == RMTristateSwitch.STATE_LEFT){
+                    if (mSwitchesArray[id].getState() == RMTristateSwitch.STATE_LEFT) {
                         answers[id] = -1;
-                    } else if (mSwitchesArray[id].getState() == RMTristateSwitch.STATE_RIGHT){
+                    } else if (mSwitchesArray[id].getState() == RMTristateSwitch.STATE_RIGHT) {
                         answers[id] = 1;
-                    } else{
+                    } else {
                         answers[id] = 0;
                     }
                 }
@@ -107,7 +109,7 @@ public class MissionFourClass extends BasicActivity {
         fullyFilled = true;
         for (int i = 0; i < OPTIONS_NUM; i++) {
             valid = valid & (answers[i] == requested[i]);
-            if (answers[i] == 0){
+            if (answers[i] == 0) {
                 fullyFilled = false;
             }
         }

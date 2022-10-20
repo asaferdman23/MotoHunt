@@ -72,8 +72,10 @@ public class GuessWhoActivity extends BasicActivity implements ItemClickListener
             @Override
             public void onClick(View view) {
                 if (checkAll()) {
+                    isFinishedTask = true;
                     endActivity();
                 } else {
+                    isFinishedTask = false;
                     TastyToast.makeText(getApplicationContext(), getResources().getString(R.string.didnt_finish),
                             TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
