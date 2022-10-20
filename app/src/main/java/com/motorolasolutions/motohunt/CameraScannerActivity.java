@@ -158,7 +158,7 @@ public class CameraScannerActivity extends BasicActivity {
                     startActivity(intent3);
                     break;
                 case "Hello4":
-                    Intent intent4 = new Intent(getApplicationContext(), MissionFourClass.class);
+                    Intent intent4 = new Intent(getApplicationContext(), MissionEightClass.class);
                     startActivity(intent4);
                     break;
                 case "Hello5":
@@ -174,7 +174,7 @@ public class CameraScannerActivity extends BasicActivity {
                     startActivity(intent7);
                     break;
                 case "Hello8":
-                    Intent intent8 = new Intent(getApplicationContext(), MissionEightClass.class);
+                    Intent intent8 = new Intent(getApplicationContext(), MissionFourClass.class);
                     startActivity(intent8);
                     break;
             }
