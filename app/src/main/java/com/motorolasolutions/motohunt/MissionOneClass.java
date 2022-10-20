@@ -1,6 +1,7 @@
 package com.motorolasolutions.motohunt;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.KeyEvent;
@@ -57,10 +58,8 @@ public class MissionOneClass extends BasicActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 String answer = editTextAns.getText().toString();
                 if (answer.equals("194")) {
-                    isFinishedTask = true;
-                    saveFinishedTask();
-                    mNextTask = 0;
-                    endActivity();
+                    Intent intent = new Intent(getApplicationContext(),RiddleOne.class);
+                    startActivity(intent);
                 } else {
                     isFinishedTask = false;
                     saveFinishedTask();

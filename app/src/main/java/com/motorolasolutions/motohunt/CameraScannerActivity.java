@@ -75,28 +75,28 @@ public class CameraScannerActivity extends BasicActivity {
                 case "class com.motorolasolutions.motohunt.TeamSetActivity":
                     mHintImage.setImageResource(R.drawable.hint_1);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionOneClass":
+                case "class com.motorolasolutions.motohunt.RiddleOne":
                     mHintImage.setImageResource(R.drawable.hint_2);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionTwoClass":
+                case "class com.motorolasolutions.motohunt.RiddleTwo":
                     mHintImage.setImageResource(R.drawable.hint_3);
                     break;
                 case "class com.motorolasolutions.motohunt.MissionThreeClass":
                     mHintImage.setImageResource(R.drawable.hint_4);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionFourClass":
+//                case "class com.motorolasolutions.motohunt.RiddleEight":
+//                    mHintImage.setImageResource(R.drawable.hint_8);
+//                    break;
+                case "class com.motorolasolutions.motohunt.MissionEightClass":
                     mHintImage.setImageResource(R.drawable.hint_5);
                     break;
                 case "class com.motorolasolutions.motohunt.GuessWhoActivity":
                     mHintImage.setImageResource(R.drawable.hint_6);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionSixClass":
+                case "class com.motorolasolutions.motohunt.RiddleSeven":
                     mHintImage.setImageResource(R.drawable.hint_7);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionSevenClass":
-                    mHintImage.setImageResource(R.drawable.hint_8);
-                    break;
-                case "class com.motorolasolutions.motohunt.MissionEightClass":
+                case "class com.motorolasolutions.motohunt.RiddleSix":
                     mHintImage.setImageResource(R.drawable.hint_8);
                     break;
             }
@@ -105,26 +105,26 @@ public class CameraScannerActivity extends BasicActivity {
                 case "class com.motorolasolutions.motohunt.TeamSetActivity":
                     mHintImage.setImageResource(R.drawable.hint_7);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionOneClass":
-                    mHintImage.setImageResource(R.drawable.hint_8);
+                case "class com.motorolasolutions.motohunt.RiddleSeven":
+                    mHintImage.setImageResource(R.drawable.hint_6);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionTwoClass":
-                    mHintImage.setImageResource(R.drawable.hint_1);
-                    break;
-                case "class com.motorolasolutions.motohunt.MissionThreeClass":
-                    mHintImage.setImageResource(R.drawable.hint_2);
-                    break;
-                case "class com.motorolasolutions.motohunt.MissionFourClass":
-                    mHintImage.setImageResource(R.drawable.hint_3);
+                case "class com.motorolasolutions.motohunt.RiddleSix":
+                    mHintImage.setImageResource(R.drawable.hint_5);
                     break;
                 case "class com.motorolasolutions.motohunt.GuessWhoActivity":
                     mHintImage.setImageResource(R.drawable.hint_4);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionSixClass":
-                    mHintImage.setImageResource(R.drawable.hint_6);
+                case "class com.motorolasolutions.motohunt.MissionEightClass":
+                    mHintImage.setImageResource(R.drawable.hint_3);
                     break;
-                case "class com.motorolasolutions.motohunt.MissionSevenClass":
-                    mHintImage.setImageResource(R.drawable.hint_5);
+                case "class com.motorolasolutions.motohunt.MissionThreeClass":
+                    mHintImage.setImageResource(R.drawable.hint_2);
+                    break;
+                case "class com.motorolasolutions.motohunt.RiddleTwo":
+                    mHintImage.setImageResource(R.drawable.hint_1);
+                    break;
+                    case "class com.motorolasolutions.motohunt.RiddleOne":
+                    mHintImage.setImageResource(R.drawable.hint_8);
                     break;
             }
         }

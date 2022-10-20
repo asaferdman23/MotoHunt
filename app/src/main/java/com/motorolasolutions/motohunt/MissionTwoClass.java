@@ -2,6 +2,7 @@ package com.motorolasolutions.motohunt;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -57,9 +58,8 @@ public class MissionTwoClass extends BasicActivity {
             public void onClick(View view) {
                 String solutionGuess = missionTwoInput.getText().toString();
                 if (solutionGuess.equals(theSolution)) {
-                    isFinishedTask = true;
-                    saveFinishedTask();
-                    endActivity();
+                    Intent intent = new Intent(getApplicationContext(),RiddleTwo.class);
+                 startActivity(intent);
                 } else {
                     isFinishedTask = false;
                     saveFinishedTask();

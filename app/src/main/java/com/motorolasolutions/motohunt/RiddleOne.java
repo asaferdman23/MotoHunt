@@ -49,9 +49,12 @@ public class RiddleOne extends BasicActivity {
             public void onClick(View view) {
                 String solutionGuess = answer.getText().toString();
                 if (solutionGuess.equals(theSolution)) {
-
+                    isFinishedTask = true;
+                    saveFinishedTask();
+                    mNextTask = 0;
                     endActivity();
                 } else {
+                    isFinishedTask = false;
                     TastyToast.makeText(getApplicationContext(), "Wrong , Try again! ", TastyToast.LENGTH_LONG, TastyToast.ERROR);
                 }
             }

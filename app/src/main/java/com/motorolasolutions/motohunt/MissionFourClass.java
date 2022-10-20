@@ -1,6 +1,7 @@
 package com.motorolasolutions.motohunt;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -43,10 +44,8 @@ public class MissionFourClass extends BasicActivity {
             //createDialog(true, isTouched? "Great!" : "Shit!");
             checkSwitch();
             if (valid) {
-                isFinishedTask = true;
-                saveFinishedTask();
-                mNextTask = 0;
-                endActivity();
+                Intent intent = new Intent(getApplicationContext(),RiddleEight.class);
+                startActivity(intent);
             } else {
                 if (!fullyFilled) {
                     isFinishedTask = false;
